@@ -3,13 +3,11 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 gem 'jquery-rails'
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'devise'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
+# authentication
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => "master"
+gem "oa-oauth", :require => "omniauth/oauth"
+gem "ruby-openid"
 
 # gem 'ruby-debug19'
 
