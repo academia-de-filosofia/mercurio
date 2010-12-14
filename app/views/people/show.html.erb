@@ -1,0 +1,90 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @person.name %>
+</p>
+
+<p>
+  <b>Rg:</b>
+  <%= @person.rg %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @person.cpf %>
+</p>
+
+<p>
+  <b>Birth date:</b>
+  <%= @person.birth_date %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @person.gender %>
+</p>
+
+<p>
+  <b>Civil state:</b>
+  <%= @person.civil_state %>
+</p>
+
+<p>
+  <b>Home phone:</b>
+  <%= @person.home_phone %>
+</p>
+
+<p>
+  <b>Comercial phone:</b>
+  <%= @person.comercial_phone %>
+</p>
+
+<p>
+  <b>Cel phone:</b>
+  <%= @person.cel_phone %>
+</p>
+
+<p>
+  <b>Cep:</b>
+  <%= @person.cep %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @person.address %>
+</p>
+
+<p>
+  <b>Neighborhood:</b>
+  <%= @person.neighborhood %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @person.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @person.state %>
+</p>
+
+<p>
+  <b>Sign up date:</b>
+  <%= @person.sign_up_date %>
+</p>
+
+<p>
+  <b>Graduation date:</b>
+  <%= @person.graduation_date %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @person.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
