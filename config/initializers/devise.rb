@@ -15,8 +15,8 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
   
   #For the Google Apps Auth
-  require 'openid/store/filesystem'   
-  config.omniauth :google_apps, OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com'
+  #  require 'openid/store/filesystem'   
+  #  config.omniauth :google_apps, OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com'
   
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is

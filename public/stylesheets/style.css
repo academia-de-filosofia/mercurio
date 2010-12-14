@@ -1,0 +1,131 @@
+body {
+	font-family: tahoma, arial;
+	font-size: 12;
+}
+
+a {
+	text-decoration: none;
+	color: black; 
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.footer {
+	padding-top: 10px;
+	text-align: right;
+	width: 100%;
+	color: gray;
+	font-size: 10px;
+}
+
+.footer hr {
+	width: 100%;
+	height: 1px;
+	border-color: #e9e9e9;
+	border-style: solid;
+}
+
+tr.even {
+	background-color: #d6e5f4;
+}
+
+tr.odd {
+
+}
+
+.excluir {
+	padding-right: 18px;
+	background: transparent url(images/excluir.png) no-repeat center right;
+}
+
+.editar {
+	padding-right: 18px;
+	background: transparent url(images/editar.png) no-repeat center right;
+}
+
+#logo {
+	float: left;
+	padding-right: 20px;
+}
+
+#logo img {
+	width: 80px;
+	height: 80px;
+}
+
+h1 {
+	color: #1a5586;
+	font-size: 18px;
+}
+
+table.grade {
+	margin: auto;
+	width: 95%;
+	font-size: 12px;
+}
+
+table.grade th {
+	background-color: #f5f5f5;
+	color: black;
+	padding: 5px;
+	empty-cells: show;
+}
+
+.form {
+	margin:auto;
+	width: 80%;
+	font-size: 13px;
+	background-color: #d6e5f4;
+	padding: 10px;
+}
+
+.form .left {
+	display: block;
+	float: left;
+	margin-right: 20px; 
+}
+
+.form label {
+	display: block;
+}
+
+.form input, input {
+	margin-bottom: 5px;
+	display: inline;
+	padding: 6px;
+	border: solid 1px #85b1de;
+}
+
+.form select {
+	margin-bottom: 5px;
+	display: inline;
+	padding: 6px;
+}
+
+.buttons {
+	margin: auto;
+	padding-top:20px;
+}
+
+h4 {
+	font-size: 15px;
+	color: #1a5586;
+	padding-bottom: 0px;
+	margin-top: 2px;
+	margin-bottom: 12px;
+	text-align: right;
+	padding:4px;
+	border: 0px;
+	border-style:solid;
+	border-bottom-width: 2px;
+	border-color: white;
+}
+
+.caixaDeErros {
+	width: 70%;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
