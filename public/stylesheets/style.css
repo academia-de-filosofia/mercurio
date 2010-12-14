@@ -3,6 +3,12 @@ body {
 	font-size: 12;
 }
 
+#main {
+	padding: 20px;	
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 a {
 	text-decoration: none;
 	color: black; 
