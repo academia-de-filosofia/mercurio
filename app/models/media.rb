@@ -1,3 +1,3 @@
 class Media < ActiveRecord::Base
-  belongs_to :mediaType
+  has_one :mediaType
 end

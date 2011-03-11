@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+medias = Media.create([{ :description => 'Livro' }, { :description => 'Revista' }, { :description => 'DVD' }])

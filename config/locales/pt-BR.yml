@@ -9,11 +9,10 @@ pt-br:
         header:
           one: "Não foi possível gravar {{model}}: 1 erro"
           other: "Não foi possível gravar {{model}}: {{count}} erros."
-        body: "Por favor, verifique o(s) seguinte(s) campo(s):"        
-          models:
-            people:
-              attributes:
-                name: "nome"
-                  blank: "informe o nome do site"
-                name:
-                  blank: "informe o nome da organização"
+        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+    models:
+        media: 'mídia'
+    attributes:
+      name: "nome"
+      title: "título"
+      time: "tempo"

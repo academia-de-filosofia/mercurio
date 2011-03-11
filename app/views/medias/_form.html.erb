@@ -25,7 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :mediaType %><br />
-    <%= f.text_field :mediaType %>
+
+	<select>
+	<%= options_from_collection_for_select(@mediaTypes, :id, :description) %>
+	</select>
+			
   </div>
   <div class="actions">
     <%= f.submit %>

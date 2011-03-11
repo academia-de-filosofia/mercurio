@@ -5,7 +5,6 @@ class CreateMedias < ActiveRecord::Migration
       t.integer :time
       t.string :description
       t.references :mediaType
-
       t.timestamps
     end
   end
