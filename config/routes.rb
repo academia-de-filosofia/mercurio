@@ -3,7 +3,7 @@ Mercurio::Application.routes.draw do
 
   resources :people
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "authentications"}
 
   root :to => "home#index"
 
