@@ -1,23 +1,10 @@
-<h1>Listing people</h1>
+<h1><%= t(:listing) %> <%= t(:people) %></h1>
 
-<table>
+<table class="grade">
   <tr>
-    <th>Name</th>
-    <th>Rg</th>
-    <th>Cpf</th>
-    <th>Birth date</th>
-    <th>Gender</th>
-    <th>Civil state</th>
-    <th>Home phone</th>
-    <th>Comercial phone</th>
-    <th>Cel phone</th>
-    <th>Cep</th>
-    <th>Address</th>
-    <th>Neighborhood</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Sign up date</th>
-    <th>Graduation date</th>
+    <th><%= t(:name) %></th>
+    <th><%=t(:birth_date) %></th>
+    <th colspan="3"><%=t(:phone) %></th>
     <th>Status</th>
     <th></th>
     <th></th>
@@ -27,29 +14,18 @@
 <% @people.each do |person| %>
   <tr>
     <td><%= person.name %></td>
-    <td><%= person.rg %></td>
-    <td><%= person.cpf %></td>
     <td><%= person.birth_date %></td>
-    <td><%= person.gender %></td>
-    <td><%= person.civil_state %></td>
     <td><%= person.home_phone %></td>
     <td><%= person.comercial_phone %></td>
     <td><%= person.cel_phone %></td>
-    <td><%= person.cep %></td>
-    <td><%= person.address %></td>
-    <td><%= person.neighborhood %></td>
-    <td><%= person.city %></td>
-    <td><%= person.state %></td>
-    <td><%= person.sign_up_date %></td>
-    <td><%= person.graduation_date %></td>
     <td><%= person.status %></td>
-    <td><%= link_to 'Show', person %></td>
-    <td><%= link_to 'Edit', edit_person_path(person) %></td>
-    <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t(:show), person %></td>
+    <td><%= link_to t(:edit), edit_person_path(person) %></td>
+    <td><%= link_to t(:destroy), person, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Person', new_person_path %>
+<%= link_to "#{t(:new)} #{t(:person)}", new_person_path %>

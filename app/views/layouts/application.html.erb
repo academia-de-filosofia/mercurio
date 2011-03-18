@@ -18,14 +18,11 @@
 	<div id="user_nav">
 	  <% if user_signed_in? %>
 
-	    Signed in as <%= current_user.email %>. Not you?
-	    <%= link_to "Sign out", destroy_user_session_path %>
-
- 		<div class="myMenu">
+		<div class="myMenu">
 			<table class="rootVoices" cellspacing='0' cellpadding='0' border='0'>
 				<tr>
 					<td class="rootVoice {menu: 'menu_pessoas'}" >Pessoas</td>
-					<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/construcao.html';">Biblioteca</td>
+					<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/medias';">Biblioteca</td>
 					<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/construcao.html';">Financeiro</td>
 					<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/sair.groovy';">Sair</td>
 				</tr>
@@ -33,11 +30,11 @@
 		</div>
 
 		<div id="menu_pessoas" class="mbmenu">
-			<a href="/aluno/listar.groovy" img="aluno.png">Alunos</a>
+			<a href="/people" img="aluno.png">Alunos</a>
 			<a href="/construcao.html" img="membro.png">Membros</a>
 			<a href="/construcao.html" img="professor.png">Professores</a>
 			<a rel="separator"></a>
-		</div>	
+		</div>
 	
 	  <% else %>
 		<br /><br /><br />
@@ -61,7 +58,6 @@
 		<hr/>
 		Mercúrio - Academia de Filosofia&nbsp;&nbsp;
 	</div>
-
 
 </body>
 </html>

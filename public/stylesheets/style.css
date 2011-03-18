@@ -66,6 +66,10 @@ h1 {
 	font-size: 18px;
 }
 
+h1,h2,h3,h4 {
+	text-align:center;
+}
+
 table.grade {
 	margin: auto;
 	width: 95%;
@@ -85,6 +89,10 @@ table.grade th {
 	font-size: 13px;
 	background-color: #d6e5f4;
 	padding: 10px;
+}
+
+.form h4 {
+	clear:both;
 }
 
 .form .left {

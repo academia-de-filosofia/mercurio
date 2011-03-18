@@ -2,7 +2,6 @@
   <% if @person.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
-
       <ul>
       <% @person.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,51 +10,48 @@
     </div>
   <% end %>
 
+<div class="form">
   <h4>Dados Gerais</h4>
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="left">
+    <%= f.label t(:name) %>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :rg %><br />
+
+    <%= f.label :rg %>
     <%= f.text_field :rg %>
-  </div>
-  <div class="field">
-    <%= f.label :cpf %><br />
+
+    <%= f.label :cpf %>
     <%= f.text_field :cpf %>
   </div>
-  <div class="field">
-    <%= f.label :birth_date %><br />
+  <div class="left">
+    <%= f.label t(:birth_date) %>
     <%= f.text_field :birth_date %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br />
+
+    <%= f.label t(:gender) %>
     <%= f.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :civil_state %><br />
+
+    <%= f.label t(:civil_state) %>
     <%= f.text_field :civil_state %>
   </div>
   <h4>Contato</h4>
-  <div class="field">
-    <%= f.label :home_phone %><br />
+  <div class="left">
+    <%= f.label t(:home_phone) %>
     <%= f.text_field :home_phone %>
   </div>
-  <div class="field">
-    <%= f.label :comercial_phone %><br />
+  <div class="left">
+    <%= f.label :comercial_phone %>
     <%= f.text_field :comercial_phone %>
   </div>
-  <div class="field">
-    <%= f.label :cel_phone %><br />
+  <div class="left">
+    <%= f.label t(:cel_phone) %>
     <%= f.text_field :cel_phone %>
   </div>
   <h4>Endereço</h4>
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label t(:address) %><br />
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :neighborhood %><br />
+    <%= f.label t(:neighborhood) %><br />
     <%= f.text_field :neighborhood %>
   </div>
   <div class="field">
@@ -63,20 +59,20 @@
     <%= f.text_field :cep %>
   </div>
   <div class="field">
-    <%= f.label :city %><br />
+    <%= f.label t(:city) %><br />
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :state %><br />
+    <%= f.label t(:state) %><br />
     <%= f.text_field :state %>
   </div>
   <h4>Escola</h4>
   <div class="field">
-    <%= f.label :sign_up_date %><br />
+    <%= f.label t(:sign_up_date) %><br />
     <%= f.date_select :sign_up_date %>
   </div>
   <div class="field">
-    <%= f.label :graduation_date %><br />
+    <%= f.label t(:graduation_date) %><br />
     <%= f.date_select :graduation_date %>
   </div>
   <div class="field">
@@ -86,4 +82,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
