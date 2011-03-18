@@ -9,12 +9,29 @@
   listing: "Listando"
   title: "Título"
   new: "Incluir"
-  media: "Mídia"
 
   #Domain
   duration: "Duração"
   description: "Descrição"
   mediaType: "Tipo de Mídia"
+  name: "Nome"
+  birth_date: "Data de nascimento"
+  phone: "Telefone"
+  media: "Mídia"
+  person: "Pessoa"
+  people: "Pessoas"
+  gender: "Gênero"
+  civil_state: "Estado Cívil"
+  home_phone: "Telefone Residencial"
+  comercial_phone: "Telefone Comercial"
+  cel_phone: "Telefone Celular"
+  city: "Cidade"
+  state: "Estado"
+  neighborhood: "Bairro"
+  address: "Endereço"
+  graduation_date: "Data da Formatura"
+  sign_up_date: "Aluno desde"
+  
   
   activerecord:
     models:
