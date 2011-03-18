@@ -1,11 +1,9 @@
-<h1>Listing medias</h1>
+<h1><%=t :listing%> <%=t(:media)%></h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Time</th>
-    <th>Description</th>
-    <th>Mediatype</th>
+    <th><%= t(:title) %></th>
+    <th><%= t(:mediaType) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,16 +12,14 @@
 <% @medias.each do |media| %>
   <tr>
     <td><%= media.title %></td>
-    <td><%= media.time %></td>
-    <td><%= media.description %></td>
-    <td></td>
-    <td><%= link_to 'Show', media %></td>
-    <td><%= link_to 'Edit', edit_media_path(media) %></td>
-    <td><%= link_to 'Destroy', media, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= media.mediaType.name %></td>
+    <td><%= link_to t(:show), media %></td>
+    <td><%= link_to t(:edit), edit_media_path(media) %></td>
+    <td><%= link_to t(:destroy), media, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Media', new_media_path %>
+<%= link_to "#{t(:new)} #{t(:media)}", new_media_path %>
