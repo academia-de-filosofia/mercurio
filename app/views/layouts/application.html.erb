@@ -7,27 +7,51 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+
 	<div id="logo">
 		<img src="/images/logo.png"/>
 	</div>
+	
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	
+	<div id="user_nav">
+	  <% if user_signed_in? %>
 
-	<div class="myMenu">
-		<table class="rootVoices" cellspacing='0' cellpadding='0' border='0'>
-			<tr>
-				<td class="rootVoice {menu: 'menu_pessoas'}" >Pessoas</td>
-				<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/construcao.html';">Biblioteca</td>
-				<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/construcao.html';">Financeiro</td>
-				<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/sair.groovy';">Sair</td>
-			</tr>
-		</table>
+	    Signed in as <%= current_user.email %>. Not you?
+	    <%= link_to "Sign out", destroy_user_session_path %>
+
+ 		<div class="myMenu">
+			<table class="rootVoices" cellspacing='0' cellpadding='0' border='0'>
+				<tr>
+					<td class="rootVoice {menu: 'menu_pessoas'}" >Pessoas</td>
+					<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/construcao.html';">Biblioteca</td>
+					<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/construcao.html';">Financeiro</td>
+					<td class="rootVoice {menu: 'empty'}" onclick="window.location.href='/sair.groovy';">Sair</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="menu_pessoas" class="mbmenu">
+			<a href="/aluno/listar.groovy" img="aluno.png">Alunos</a>
+			<a href="/construcao.html" img="membro.png">Membros</a>
+			<a href="/construcao.html" img="professor.png">Professores</a>
+			<a rel="separator"></a>
+		</div>	
+	
+	  <% else %>
+		<br /><br /><br />
+		Olá, seja bem-vindo ao sistema Mercúrio!
+
+		<div class="buttons">
+		<% link_to(user_omniauth_authorize_path(:google_apps), html_options = {:method => :post}) do %>
+			Entre com sua conta do Google
+			<img src="images/icons/door_in.png" alt="" />
+		<% end %>
+		</div>
+
+	  <% end %>
 	</div>
-
-	<div id="menu_pessoas" class="mbmenu">
-		<a href="/aluno/listar.groovy" img="aluno.png">Alunos</a>
-		<a href="/construcao.html" img="membro.png">Membros</a>
-		<a href="/construcao.html" img="professor.png">Professores</a>
-		<a rel="separator"></a>
-	</div> 	
 
 	<div id="main">
 		<%= yield %>
