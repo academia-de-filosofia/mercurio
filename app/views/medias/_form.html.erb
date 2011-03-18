@@ -12,24 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.label t(:title) %><br />
+    <%= f.text_field(:title, :size => "50") %>
   </div>
   <div class="field">
-    <%= f.label :time %><br />
-    <%= f.text_field :time %>
+    <%= f.label t(:duration) %><br />
+    <%= f.text_field(:time, :size => "3") %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.label t(:description) %><br />
+    <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :mediaType %><br />
-
-	<select>
-	<%= options_from_collection_for_select(@mediaTypes, :id, :name) %>
-	</select>
-			
+    <%= f.label t(:mediaType) %><br />
+	<%= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) %>
   </div>
   <div class="actions">
     <%= f.submit %>

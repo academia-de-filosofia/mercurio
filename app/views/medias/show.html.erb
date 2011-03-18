@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%=t :title %>:</b>
   <%= @media.title %>
 </p>
 
 <p>
-  <b>Time:</b>
+  <b><%=t :duration %>:</b>
   <%= @media.time %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b><%=t :description %>:</b>
   <%= @media.description %>
 </p>
 
 <p>
-  <b>Mediatype:</b>
+  <b><%=t :mediaType %>:</b>
   <%= @media.mediaType %>
 </p>
 
 
-<%= link_to 'Edit', edit_media_path(@media) %> |
-<%= link_to 'Back', medias_path %>
+<%= link_to t(:edit) , edit_media_path(@media) %> |
+<%= link_to t(:back) , medias_path %>
