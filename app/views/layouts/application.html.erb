@@ -25,9 +25,14 @@
 		</div>
 
 		<hr />
-
-		<span class="notice hide"><%= notice %></span>
-		<span class="error hide"><%= alert %></span>
+		
+		<% if notice %>
+			<div class="notice"><%= notice %></div>
+		<% end %>
+		
+		<% if alert %>
+			<div class="error"><%= alert %></div>
+		<% end %>
 
 		<div class="span-17 colborder" id="content">
 
