@@ -19,7 +19,7 @@
 			<div class="span-4"><img src="/images/logo.gif" /></div>
 			<div class="span-20 last">
 				<% if user_signed_in? %>
-					<%= render "menu" %>
+					<%= render "shared/menu" %>
 				<% end %>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 			<div id="main">
 				<br/>
 				<% if !user_signed_in? %>
-					<%= render "login" %>
+					<%= render "shared/login" %>
 				<% else %>
 					<%= yield %>
 				<% end %>  
