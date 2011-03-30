@@ -8,11 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
   def self.find_for_google_apps_oauth(access_token, signed_in_resource=nil)
-    data = access_token['extra']['user_hash']
-    if user = User.find_by_email(data["email"])
-      user
-    else # Create an user with a stub password. 
-      User.create!(:email => data["email"], :password => Devise.friendly_token[0,20]) 
-    end
+    email = access_token['user_info']['email']
+    user = User.find_by_email(email)
   end
 end

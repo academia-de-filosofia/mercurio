@@ -1,4 +1,4 @@
-  <h4>Endereço</h4>en:
+en:
   errors:
     messages:
       not_found: "not found"
@@ -37,3 +37,6 @@
         subject: 'Reset password instructions'
       unlock_instructions:
         subject: 'Unlock Instructions'
+    omniauth_callbacks:
+            success: 'User successfully authorized'
+            failure: 'Authentication failure'
