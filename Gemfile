@@ -9,6 +9,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise', '1.2.rc'
 gem 'oa-openid', :require => 'omniauth/openid'
 
+#stylesheets
+gem "compass", ">= 0.10.6"
+
 # gem 'ruby-debug19'
 
 group :test, :development do

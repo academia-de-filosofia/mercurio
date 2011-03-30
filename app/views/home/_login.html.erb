@@ -1,7 +1,9 @@
-Olá, seja bem-vindo ao sistema Mercúrio!
+<div class="span-24 last">
+	<h3>Olá, seja bem-vindo ao sistema Mercúrio!</h3>
+</div>
 
-<div class="buttons">
-<% link_to(user_omniauth_authorize_path(:google_apps), html_options = {:method => :post}) do %>
+<div>
+<% link_to(user_omniauth_authorize_path(:google_apps), html_options = {:method => :post, :class => 'button'}) do %>
 	Entre com sua conta da Academia
 	<img src="images/icons/door_in.png" alt="" />
 <% end %>

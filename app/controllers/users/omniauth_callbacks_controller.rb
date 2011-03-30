@@ -9,7 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success"
       sign_in_and_redirect @user, :event => :authentication
     else
-      flash[:notice] = I18n.t "devise.omniauth_callbacks.failure"
+      flash[:alert] = I18n.t "devise.omniauth_callbacks.failure"
       redirect_to root_url
     end
   end

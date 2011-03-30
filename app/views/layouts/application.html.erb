@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mercurio</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :all %>
-  <%= csrf_meta_tag %>
+	<title>Mercurio</title>
+	<%= javascript_include_tag :all %>
+	<%= stylesheet_link_tag 'menu.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'compiled/print.css', :media => 'print' %>
+	<!--[if lt IE 8]>
+	<%= stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection' %>
+	<![endif]-->
+	<%= stylesheet_link_tag 'compiled/buttons.css', :media => 'screen, projection' %>
+	<%= csrf_meta_tag %>
 </head>
 <body>
+	<div class="container">
 
-	<div id="logo">
-		<img src="/images/logo.gif"/>
-	</div>
-	
-	<p id="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-	
-	<div id="user_nav">
-	  <% if user_signed_in? %>
-		<%= render "menu" %>
-	  <% else %>
-		<%= render "login" %>
-	  <% end %>
-	</div>
+		<div id="header">
+			<div class="span-4"><img src="/images/logo.gif" /></div>
+			<div class="span-20 last">
+				<% if user_signed_in? %>
+					<%= render "menu" %>
+				<% end %>
+			</div>
+		</div>
 
-	<div id="main">
-		<%= yield %>
-	</div>
+		<hr />
 
-	<div class="footer">
+		<span class="notice hide"><%= notice %></span>
+		<span class="error hide"><%= alert %></span>
+
+		<div class="span-17 colborder" id="content">
+
+			<div id="main">
+				<br/>
+				<% if !user_signed_in? %>
+					<%= render "login" %>
+				<% else %>
+					<%= yield %>
+				<% end %>  
+			</div>
+		</div>
+
 		<hr/>
-		Mercúrio - Academia de Filosofia&nbsp;&nbsp;
-	</div>
 
+		<div id="footer">
+			<span class="prepend-19"></span>
+			<span class="span-5 last">Mercúrio - Academia de Filosofia</span>
+		</div>
+	</div>
 </body>
 </html>
