@@ -13,13 +13,13 @@
   <tr>
     <td><%= media.title %></td>
     <td><%= media.mediaType.name %></td>
-    <td><%= link_to t(:show), media %></td>
-    <td><%= link_to t(:edit), edit_media_path(media) %></td>
-    <td><%= link_to t(:destroy), media, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t(:show), media, :class => 'button' %></td>
+    <td><%= link_to t(:edit), edit_media_path(media), :class => 'button' %></td>
+    <td><%= link_to t(:destroy), media, :class => 'button', :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to "#{t(:new)} #{t(:media)}", new_media_path %>
+<%= link_to "#{t(:new)} #{t(:media)}", new_media_path, :class => 'button' %>
