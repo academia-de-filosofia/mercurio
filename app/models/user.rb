@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
   
   def self.find_for_google_apps_oauth(access_token, signed_in_resource=nil)
     email = access_token['user_info']['email']
-    user = User.find_by_email(email)
+    if user = User.find_by_email(email)
+      user
+    else
+      User.create!(:email => email, :password => Devise.friendly_token[0,20])
+    end
   end
 end
