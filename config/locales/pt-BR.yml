@@ -1,6 +1,46 @@
-# encoding: UTF-8
-# pt-BR translations for Ruby on Rails
-"pt-BR":
+"pt_BR":
+
+  #general
+  back: "Voltar"
+  edit: "Editar"
+  show: "Exibir"
+  destroy: "Excluir"
+  editing: "Editando"
+  listing: "Listando"
+  title: "Título"
+  new: "Incluir"
+
+  #Domain
+  duration: "Duração"
+  description: "Descrição"
+  mediaType: "Tipo de Mídia"
+  name: "Nome"
+  birth_date: "Data de nascimento"
+  phone: "Telefone"
+  media: "Mídia"
+  person: "Pessoa"
+  people: "Pessoas"
+  gender: "Gênero"
+  civil_state: "Estado Cívil"
+  home_phone: "Telefone Residencial"
+  comercial_phone: "Telefone Comercial"
+  cel_phone: "Telefone Celular"
+  city: "Cidade"
+  state: "Estado"
+  neighborhood: "Bairro"
+  address: "Endereço"
+  graduation_date: "Data da Formatura"
+  sign_up_date: "Aluno desde"
+  
+  
+  activerecord:
+    models:
+      media: "Mídia"
+      mediaType: "Tipo de Mídia"
+    attributes:
+      media:
+        title: "Título"
+
   # formatos de data e hora
   date:
     formats:
@@ -18,7 +58,7 @@
       - :month
       - :year
   
-  time:
+  time: 
     formats:
       default: "%A, %d de %B de %Y, %H:%M h"
       short: "%d/%m, %H:%M h"
@@ -181,19 +221,3 @@
       less_than_or_equal_to: "deve ser menor ou igual a %{count}"
       odd: "deve ser ímpar"
       even: "deve ser par"
-
-  activerecord:
-    errors:
-      template:
-        header:
-          one: "Não foi possível gravar %{model}: 1 erro"
-          other: "Não foi possível gravar %{model}: %{count} erros."
-        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
-
-      messages:
-        taken: "já está em uso"
-        record_invalid: "A validação falhou: %{errors}"
-        <<: *errors_messages
-
-      full_messages:
-        format: "%{attribute}%{message}"
