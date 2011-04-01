@@ -1,7 +1,9 @@
 Mercurio::Application.routes.draw do
-  resources :medias
 
+  resources :medias
   resources :people
+
+  match "import" => "people#import"
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
     get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session

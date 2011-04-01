@@ -20,11 +20,12 @@
   media: "Mídia"
   person: "Pessoa"
   people: "Pessoas"
-  gender: "Gênero"
+  gender: "Sexo"
   marital_status: "Estado Civil"
   home_phone: "Telefone Residencial"
   work_phone: "Telefone Comercial"
   cell_phone: "Celular"
+  email: "E-mail"
   city: "Cidade"
   state: "Estado"
   neighborhood: "Bairro"
@@ -53,8 +54,8 @@
         title: "Título"
       person:
         name: "Nome"
-        gender: "Gênero"
-        cel_phone: "Celular"
+        gender: "Sexo"
+        cell_phone: "Celular"
         birth_date: "Data de Nascimento"
           
 

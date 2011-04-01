@@ -6,17 +6,19 @@ class CreatePeople < ActiveRecord::Migration
       t.string :cpf
       t.string :birth_date
       t.string :gender
-      t.string :civil_state
+      t.string :marital_status
       t.string :home_phone
-      t.string :comercial_phone
-      t.string :cel_phone
-      t.string :cep
+      t.string :work_phone
+      t.string :cell_phone
+      t.string :email
+      t.string :zip_code
       t.string :address
       t.string :neighborhood
       t.string :city
       t.string :state
       t.date :sign_up_date
       t.date :graduation_date
+      t.date :exit_date
       t.boolean :status
 
       t.timestamps

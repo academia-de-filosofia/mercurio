@@ -11,7 +11,7 @@ describe "people/edit.html.erb" do
       :civil_state => "MyString",
       :home_phone => "MyString",
       :comercial_phone => "MyString",
-      :cel_phone => "MyString",
+      :cell_phone => "MyString",
       :cep => "MyString",
       :address => "MyString",
       :neighborhood => "MyString",
@@ -34,7 +34,7 @@ describe "people/edit.html.erb" do
       assert_select "input#person_civil_state", :name => "person[civil_state]"
       assert_select "input#person_home_phone", :name => "person[home_phone]"
       assert_select "input#person_comercial_phone", :name => "person[comercial_phone]"
-      assert_select "input#person_cel_phone", :name => "person[cel_phone]"
+      assert_select "input#person_cell_phone", :name => "person[cell_phone]"
       assert_select "input#person_cep", :name => "person[cep]"
       assert_select "input#person_address", :name => "person[address]"
       assert_select "input#person_neighborhood", :name => "person[neighborhood]"
