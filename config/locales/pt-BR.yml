@@ -24,22 +24,36 @@
   civil_state: "Estado Cívil"
   home_phone: "Telefone Residencial"
   comercial_phone: "Telefone Comercial"
-  cel_phone: "Telefone Celular"
+  cel_phone: "Celular"
   city: "Cidade"
   state: "Estado"
   neighborhood: "Bairro"
   address: "Endereço"
   graduation_date: "Data da Formatura"
   sign_up_date: "Aluno desde"
+  active: "Ativo"
+  inactive: "Inativo"
+  zip_code: "CEP"
+  status: "Status"
+  rg: "RG"
+  cpf: "CPF"
+  pending: "Pendências"
   
   
   activerecord:
     models:
       media: "Mídia"
       mediaType: "Tipo de Mídia"
+      person: "Pessoa"
     attributes:
       media:
         title: "Título"
+      person:
+        name: "Nome"
+        gender: "Gênero"
+        cel_phone: "Celular"
+        birth_date: "Data de Nascimento"
+          
 
   # formatos de data e hora
   date:

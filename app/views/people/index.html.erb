@@ -4,7 +4,7 @@
   <tr>
     <th><%= t(:name) %></th>
     <th><%=t(:birth_date) %></th>
-    <th colspan="3"><%=t(:phone) %></th>
+    <th><%=t(:cel_phone) %></th>
     <th>Status</th>
     <th></th>
     <th></th>
@@ -15,10 +15,8 @@
   <tr>
     <td><%= person.name %></td>
     <td><%= person.birth_date %></td>
-    <td><%= person.home_phone %></td>
-    <td><%= person.comercial_phone %></td>
     <td><%= person.cel_phone %></td>
-    <td><%= person.status %></td>
+    <td><%= person.status ? t(:active) : t(:inactive) %></td>
     <td><%= link_to t(:show), person, :class => 'button' %></td>
     <td><%= link_to t(:edit), edit_person_path(person), :class => 'button' %></td>
     <td><%= link_to t(:destroy), person, :class => 'button', :confirm => 'Are you sure?', :method => :delete %></td>

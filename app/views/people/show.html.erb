@@ -1,90 +1,94 @@
+<h2><%= @person.name %></h2>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @person.name %>
+  <b><%=t(:status)%>:</b>
+  <%= t(@person.status_description) %>
 </p>
 
 <p>
-  <b>Rg:</b>
+  <b>RG:</b>
   <%= @person.rg %>
 </p>
 
 <p>
-  <b>Cpf:</b>
+  <b>CPF:</b>
   <%= @person.cpf %>
 </p>
 
 <p>
-  <b>Birth date:</b>
+  <b><%= t(:birth_date) %> :</b>
   <%= @person.birth_date %>
 </p>
 
 <p>
-  <b>Gender:</b>
+  <b><%=t(:gender)%>:</b>
   <%= @person.gender %>
 </p>
 
 <p>
-  <b>Civil state:</b>
+  <b><%=t(:civil_state)%>:</b>
   <%= @person.civil_state %>
 </p>
 
+<h3>Contato</h3>
+
 <p>
-  <b>Home phone:</b>
+  <b><%=t(:home_phone)%>:</b>
   <%= @person.home_phone %>
 </p>
 
 <p>
-  <b>Comercial phone:</b>
+  <b><%=t(:comercial_phone)%>:</b>
   <%= @person.comercial_phone %>
 </p>
 
 <p>
-  <b>Cel phone:</b>
+  <b><%=t(:cel_phone)%>:</b>
   <%= @person.cel_phone %>
 </p>
 
-<p>
-  <b>Cep:</b>
-  <%= @person.cep %>
-</p>
+<h3>Endereço</h3>
 
 <p>
-  <b>Address:</b>
+  <b><%=t(:address)%>:</b>
   <%= @person.address %>
 </p>
 
 <p>
-  <b>Neighborhood:</b>
+  <b><%=t(:neighborhood)%>:</b>
   <%= @person.neighborhood %>
 </p>
 
 <p>
-  <b>City:</b>
+  <b><%=t(:city)%>:</b>
   <%= @person.city %>
 </p>
 
 <p>
-  <b>State:</b>
+  <b><%=t(:state)%>:</b>
   <%= @person.state %>
 </p>
 
 <p>
-  <b>Sign up date:</b>
+  <b><%=t(:zip_code)%>:</b>
+  <%= @person.cep %>
+</p>
+
+<h3>Escola</h3>
+
+<p>
+  <b><%=t(:sign_up_date)%>:</b>
   <%= @person.sign_up_date %>
 </p>
 
 <p>
-  <b>Graduation date:</b>
+  <b><%=t(:graduation_date)%>:</b>
   <%= @person.graduation_date %>
 </p>
 
-<p>
-  <b>Status:</b>
-  <%= @person.status %>
-</p>
 
+<%= link_to t(:back), people_path, :class => 'button' %>
+<%= link_to t(:edit), edit_person_path(@person), :class => 'button' %>
 
-<%= link_to 'Edit', edit_person_path(@person), :class => 'button' %> |
-<%= link_to 'Back', people_path, :class => 'button' %>
