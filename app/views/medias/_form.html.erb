@@ -12,24 +12,23 @@
   <% end %>
 
 <div class="span-24 last"> 
-  <div class="field">
-    <%= f.label t(:title) %><br />
-    <%= f.text_field(:title, :size => "50") %>
-  </div>
-  <div class="field">
-    <%= f.label t(:duration) %><br />
-    <%= f.text_field(:time, :size => "3") %>
-  </div>
-  <div class="field">
-    <%= f.label t(:description) %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label t(:mediaType) %><br />
-	<%= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <%= f.label t(:title) %><br/>
+    <%= f.text_field(:title, :size => "50") %><br/>
+
+    <%= f.label t(:duration) %><br/>
+    <%= f.text_field(:time, :size => "3") %><br/>
+
+    <%= f.label t(:description) %><br/>
+    <%= f.text_area :description %><br/>
+
+    <%= f.label t(:mediaType) %><br/>
+	<%= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) %><br/>
+
 </div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+
 <% end %>
