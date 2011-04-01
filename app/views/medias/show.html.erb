@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b><%=t :title %>:</b>
-  <%= @media.title %>
-</p>
+<h2><%= @media.title %></h2>
 
 <p>
   <b><%=t :duration %>:</b>
@@ -20,6 +17,5 @@
   <%= @media.mediaType %>
 </p>
 
-
-<%= link_to t(:edit) , edit_media_path(@media), :class => 'button' %> |
+<%= link_to t(:edit) , edit_media_path(@media), :class => 'button' %> 
 <%= link_to t(:back) , medias_path, :class => 'button' %>
