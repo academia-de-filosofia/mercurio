@@ -21,10 +21,10 @@
   person: "Pessoa"
   people: "Pessoas"
   gender: "Gênero"
-  civil_state: "Estado Cívil"
+  marital_status: "Estado Civil"
   home_phone: "Telefone Residencial"
-  comercial_phone: "Telefone Comercial"
-  cel_phone: "Celular"
+  work_phone: "Telefone Comercial"
+  cell_phone: "Celular"
   city: "Cidade"
   state: "Estado"
   neighborhood: "Bairro"
@@ -38,6 +38,7 @@
   rg: "RG"
   cpf: "CPF"
   pending: "Pendências"
+  exit_date: "Data da saída"
   
   
   activerecord:
