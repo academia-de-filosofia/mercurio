@@ -31,15 +31,17 @@
   address: "Endereço"
   graduation_date: "Data da Formatura"
   sign_up_date: "Aluno desde"
+  exit_date: "Data da saída"
   active: "Ativo"
   inactive: "Inativo"
   zip_code: "CEP"
   status: "Status"
   rg: "RG"
   cpf: "CPF"
-  pending: "Pendências"
-  exit_date: "Data da saída"
-  
+  pending: 
+      one: "%{count} Pendência"
+      other: "%{count} Pendências"
+
   
   activerecord:
     models:
