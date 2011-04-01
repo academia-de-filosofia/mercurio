@@ -21,16 +21,17 @@
   person: "Pessoa"
   people: "Pessoas"
   gender: "Gênero"
-  civil_state: "Estado Cívil"
+  marital_status: "Estado Civil"
   home_phone: "Telefone Residencial"
-  comercial_phone: "Telefone Comercial"
-  cel_phone: "Celular"
+  work_phone: "Telefone Comercial"
+  cell_phone: "Celular"
   city: "Cidade"
   state: "Estado"
   neighborhood: "Bairro"
   address: "Endereço"
   graduation_date: "Data da Formatura"
   sign_up_date: "Aluno desde"
+  exit_date: "Data da saída"
   active: "Ativo"
   inactive: "Inativo"
   zip_code: "CEP"
@@ -40,8 +41,7 @@
   pending: 
       one: "%{count} Pendência"
       other: "%{count} Pendências"
-  
-  
+
   
   activerecord:
     models:

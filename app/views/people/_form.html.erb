@@ -28,8 +28,8 @@
     <%= f.label t(:gender) %><br/>
     <%= f.text_field :gender %><br/>
 
-    <%= f.label t(:civil_state) %><br/>
-    <%= f.text_field :civil_state %><br/>
+    <%= f.label t(:marital_status) %><br/>
+    <%= f.text_field :marital_status %><br/>
   </div>
   <div class="span-1"></div>
   <div class="span-9 last">
@@ -40,8 +40,8 @@
     <%= f.label t(:neighborhood) %><br/>
     <%= f.text_field :neighborhood %><br/>
 
-    <%= f.label :cep %><br/>
-    <%= f.text_field :cep %><br/>
+    <%= f.label :zip_code %><br/>
+    <%= f.text_field :zip_code %><br/>
 
     <%= f.label t(:city) %><br/>
     <%= f.text_field :city %><br/>
@@ -55,11 +55,14 @@
     <%= f.label t(:home_phone) %><br/>
     <%= f.text_field :home_phone, :size => 10 %><br/>
 
-    <%= f.label :comercial_phone %><br/>
-    <%= f.text_field :comercial_phone, :size => 10 %><br/>
+    <%= f.label :work_phone %><br/>
+    <%= f.text_field :work_phone, :size => 10 %><br/>
 
-    <%= f.label t(:cel_phone) %><br/>
-    <%= f.text_field :cel_phone, :size => 10 %><br/>
+    <%= f.label t(:cell_phone) %><br/>
+    <%= f.text_field :cell_phone, :size => 10 %><br/>
+
+    <%= f.label t(:email) %><br/>
+    <%= f.text_field :email %><br/>
   </div>
   <div class="span-1"></div>
   <div class="span-9 last">
@@ -72,6 +75,9 @@
 
     <%= f.label :status %><br/>
     <%= f.check_box :status %><br/>
+
+	<%= f.label t(:exit_date) %><br/>
+    <%= f.date_select :exit_date %><br/>
   </div>
 
 </div>

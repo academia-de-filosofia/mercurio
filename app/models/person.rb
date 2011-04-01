@@ -1,6 +1,6 @@
 class Person < ActiveRecord::Base
    validates_length_of :name, :minimum => 7
-   validates_presence_of :name, :gender, :birth_date, :cel_phone
+   validates_presence_of :name, :gender, :birth_date, :cell_phone
    
   
   def status_description
