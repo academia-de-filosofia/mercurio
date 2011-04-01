@@ -1,7 +1,7 @@
 <%= form_for(@person) do |f| %>
   <% if @person.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @person.errors.count %> <%= t(:pending)%>:</h2>
+    <div id="error_explanation" class="error">
+      <h2><%= t(:pending, :count => @person.errors.count)%>:</h2>
       <ul>
       <% @person.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

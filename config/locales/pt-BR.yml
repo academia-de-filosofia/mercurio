@@ -37,7 +37,10 @@
   status: "Status"
   rg: "RG"
   cpf: "CPF"
-  pending: "Pendências"
+  pending: 
+      one: "%{count} Pendência"
+      other: "%{count} Pendências"
+  
   
   
   activerecord:
