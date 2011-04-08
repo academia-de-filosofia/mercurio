@@ -17,5 +17,10 @@
   <%= @media.mediaType %>
 </p>
 
+<p>
+  <b><%=t :genre %>:</b>
+  <%= @media.genre.name %>
+</p>
+
 <%= link_to t(:edit) , edit_media_path(@media), :class => 'button' %> 
 <%= link_to t(:back) , medias_path, :class => 'button' %>

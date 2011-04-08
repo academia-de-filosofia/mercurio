@@ -24,6 +24,9 @@
 
     <%= f.label t(:mediaType) %><br/>
 	<%= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) %><br/>
+	
+	<%= f.label t(:genre) %><br/>
+	<%= f.select(:genre_id,  options_from_collection_for_select(@genres, :id, :name, (unless @media.genre.nil? then @media.genre.id end ))) %><br/>
 
 </div>
 
