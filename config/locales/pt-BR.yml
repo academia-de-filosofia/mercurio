@@ -39,6 +39,8 @@
   status: "Status"
   rg: "RG"
   cpf: "CPF"
+  genre: "Gênero"
+  genres: "Gêneros"
   pending: 
       one: "%{count} Pendência"
       other: "%{count} Pendências"
@@ -49,6 +51,7 @@
       media: "Mídia"
       mediaType: "Tipo de Mídia"
       person: "Pessoa"
+      genre: "Gênero"
     attributes:
       media:
         title: "Título"

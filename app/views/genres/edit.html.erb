@@ -1,0 +1,6 @@
+<h1><%= "#{t(:editing)} #{t(:genre)}"%></h1>
+
+<%= render 'form' %>
+
+<%= link_to t(:show), @genre, :class => 'button' %> 
+<%= link_to t(:back), genres_path, :class => 'button' %>

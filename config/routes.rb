@@ -1,5 +1,7 @@
 Mercurio::Application.routes.draw do
 
+  resources :genres
+
   resources :medias
   resources :people
 

@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b<><%= t(:name)%>:</b>
+  <%= @genre.name %>
+</p>
+
+
+<%= link_to t(:edit), edit_genre_path(@genre), :class => 'button' %> 
+<%= link_to t(:back), genres_path, :class => 'button' %>
