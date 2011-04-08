@@ -1,0 +1,25 @@
+<%%= form_for(@<%= singular_table_name %>) do |f| %>
+  <%% if @<%= singular_table_name %>.errors.any? %>
+    <div id="error_explanation">
+      <h2><%%= t(:pending, :count => @<%= singular_table_name %>.errors.count)%>:</h2>
+
+      <ul>
+      <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>
+        <li><%%= msg %></li>
+      <%% end %>
+      </ul>
+    </div>
+  <%% end %>
+
+<div class="span-24 last">
+<% for attribute in attributes -%>
+  <div class="field">
+    <%%= f.label :t(<%= attribute.name %>) %><br />
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %><br/>
+  </div>
+<% end -%>
+  <div class="actions">
+    <%%= f.submit %>
+  </div>
+</div>
+<%% end %>
