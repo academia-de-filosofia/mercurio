@@ -9,7 +9,7 @@
   </tr>
 
 <% @genres.each do |genre| %>
-  <tr>
+  <tr class="<%= cycle('odd', 'even') %>">
     <td><%= genre.name %></td>
     <td><%= link_to t(:show), genre, :class => 'button' %></td>
     <td><%= link_to t(:edit), edit_genre_path(genre), :class => 'button' %></td>

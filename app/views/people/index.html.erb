@@ -12,7 +12,7 @@
   </tr>
 
 <% @people.each do |person| %>
-  <tr>
+  <tr class="<%= cycle('odd', 'even') %>">
     <td><%= person.name %></td>
     <td><%= person.birth_date %></td>
     <td><%= person.cell_phone %></td>

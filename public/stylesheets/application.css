@@ -4,3 +4,11 @@
 	border-bottom: 1px solid #e0e0e0;
 	width: 90%;
 }
+
+table tr.odd {
+	background-color: white;
+}
+
+table tr.even {
+	background-color: silver;
+}

@@ -40,7 +40,7 @@ a.button:active {
 }
 
 /* line 31, ../../../app/stylesheets/buttons.scss */
-button, input[type="submit"] {
+button {
   display: inline;
   float: left;
   display: block;

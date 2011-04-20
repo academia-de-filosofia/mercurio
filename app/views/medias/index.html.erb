@@ -10,7 +10,7 @@
   </tr>
 
 <% @medias.each do |media| %>
-  <tr>
+  <tr class="<%= cycle('odd', 'even') %>">
     <td><%= media.title %></td>
     <td><%= media.mediaType.name %></td>
     <td><%= link_to t(:show), media, :class => 'button' %></td>
