@@ -42,8 +42,8 @@
   genre: "Gênero"
   genres: "Gêneros"
   pending: 
-      one: "%{count} Pendência"
-      other: "%{count} Pendências"
+      one: "%{count} pendência"
+      other: "%{count} pendências"
 
   
   activerecord:
@@ -58,7 +58,7 @@
       person:
         name: "Nome"
         gender: "Sexo"
-        cell_phone: "Celular"
+        home_phone: "Telefone Residencial"
         birth_date: "Data de Nascimento"
           
 
