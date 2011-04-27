@@ -5,6 +5,10 @@
   <%= @genre.name %>
 </p>
 
+<p>
+  <b<><%= t(:acronym)%>:</b>
+  <%= @genre.acronym %>
+</p>
 
 <%= link_to t(:edit), edit_genre_path(@genre), :class => 'button' %> 
 <%= link_to t(:back), genres_path, :class => 'button' %>

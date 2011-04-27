@@ -40,7 +40,11 @@
   rg: "RG"
   cpf: "CPF"
   genre: "Gênero"
+  acronym: "Sigla"
   genres: "Gêneros"
+  price: "Preço"
+  code: "Tombo"
+  author: "Autor"
   pending: 
       one: "%{count} pendência"
       other: "%{count} pendências"
@@ -55,6 +59,9 @@
     attributes:
       media:
         title: "Título"
+        price: "Preço"
+        code: "Número de Tombo"
+        author: "Autor"
       person:
         name: "Nome"
         gender: "Sexo"

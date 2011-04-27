@@ -1,8 +1,8 @@
 <%= form_for(@media) do |f| %>
-  <% if @media.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@media.errors.count, "error") %> prohibited this media from being saved:</h2>
-
+  
+<% if @media.errors.any? %>
+    <div id="error_explanation" class="error">       
+	  <h2><%= t(:pending, :count => @media.errors.count)%>:</h2>
       <ul>
       <% @media.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -13,20 +13,37 @@
 
 <div class="span-24 last"> 
 
-    <%= f.label t(:title) %><br/>
-    <%= f.text_field(:title, :size => "50") %><br/>
+	<div class="span-8">
+    	<%= f.label t(:title) %><br/>
+	    <%= f.text_field(:title, :size => "50", :class => "span-7") %>
 
-    <%= f.label t(:duration) %><br/>
-    <%= f.text_field(:time, :size => "3") %><br/>
+		<%= f.label t(:author) %><br/>
+	    <%= f.text_field(:author, :size => "45", :class => "span-7") %>
+	</div>
 
-    <%= f.label t(:description) %><br/>
-    <%= f.text_area :description %><br/>
-
-    <%= f.label t(:mediaType) %><br/>
-	<%= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) %><br/>
+	<div class="span-8">	   
+		<%= f.label t(:code) %><br/>
+	    <%= f.text_field(:code, :size => "15", :class => "span-5") %>
 	
-	<%= f.label t(:genre) %><br/>
-	<%= f.select(:genre_id,  options_from_collection_for_select(@genres, :id, :name, (unless @media.genre.nil? then @media.genre.id end ))) %><br/>
+		<%= f.label t(:price) %><br/>
+	    <%= f.text_field(:price, :size => "7", :class => "span-5") %>
+	</div>	
+
+	<div class="span-8 last">
+	    <%= f.label t(:mediaType) %><br/>
+		<%= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) %><br/>
+	
+		<%= f.label t(:genre) %><br/>
+		<%= f.select(:genre_id,  options_from_collection_for_select(@genres, :id, :name, (unless @media.genre.nil? then @media.genre.id end ))) %><br/>
+	</div>
+
+	<div class="span-24 last">
+		<%= f.label t(:description) %><br/>
+    	<%= f.text_area :description %><br/>
+
+		<%= f.label t(:duration) %><br/>
+		<%= f.text_field(:time, :size => "3", :class => "span-5") %><br/>
+	</div>
 
 </div>
 

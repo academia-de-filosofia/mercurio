@@ -10,12 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110408111405) do
+ActiveRecord::Schema.define(:version => 20110427120502) do
 
   create_table "genres", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "acronym"
   end
 
   create_table "media_types", :force => true do |t|
@@ -32,6 +33,9 @@ ActiveRecord::Schema.define(:version => 20110408111405) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "genre_id"
+    t.float    "price"
+    t.string   "author"
+    t.integer  "code"
   end
 
   create_table "people", :force => true do |t|

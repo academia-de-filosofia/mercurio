@@ -11,6 +11,12 @@ class MediasController < InheritedResources::Base
     @genres = Genre.all
     super
   end
+  
+  def update
+    @mediaTypes = MediaType.all
+    @genres = Genre.all
+    super
+  end
 
   
 end

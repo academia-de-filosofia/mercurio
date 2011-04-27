@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	<th><%= t(:acronym)%></th>
     <th><%= t(:name)%></th>
     <th></th>
     <th></th>
@@ -10,7 +11,8 @@
 
 <% @genres.each do |genre| %>
   <tr class="<%= cycle('odd', 'even') %>">
-    <td><%= genre.name %></td>
+	<td><%= genre.acronym %></td>    
+	<td><%= genre.name %></td>
     <td><%= link_to t(:show), genre, :class => 'button' %></td>
     <td><%= link_to t(:edit), edit_genre_path(genre), :class => 'button' %></td>
     <td><%= link_to t(:destroy), genre, :confirm => 'Are you sure?', :method => :delete, :class => 'button' %></td>

@@ -2,6 +2,7 @@
 
 <table class="grade">
   <tr>
+	<th><%= t(:code) %></th>
     <th><%= t(:title) %></th>
     <th><%= t(:mediaType) %></th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @medias.each do |media| %>
   <tr class="<%= cycle('odd', 'even') %>">
+	<td><%= media.genre.acronym %><%= media.code %></td>
     <td><%= media.title %></td>
     <td><%= media.mediaType.name %></td>
     <td><%= link_to t(:show), media, :class => 'button' %></td>

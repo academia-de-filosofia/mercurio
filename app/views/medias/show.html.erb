@@ -3,13 +3,13 @@
 <h2><%= @media.title %></h2>
 
 <p>
-  <b><%=t :duration %>:</b>
-  <%= @media.time %>
+  <b><%=t :author %>:</b>
+  <%= @media.author %>
 </p>
 
 <p>
-  <b><%=t :description %>:</b>
-  <%= @media.description %>
+  <b><%=t :code %>:</b>
+  <%= @media.code %>
 </p>
 
 <p>
@@ -20,6 +20,16 @@
 <p>
   <b><%=t :genre %>:</b>
   <%= @media.genre.name %>
+</p>
+
+<p>
+  <b><%=t :description %>:</b>
+  <%= @media.description %>
+</p>
+
+<p>
+  <b><%=t :duration %>:</b>
+  <%= @media.time %>
 </p>
 
 <%= link_to t(:edit) , edit_media_path(@media), :class => 'button' %> 
