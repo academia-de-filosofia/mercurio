@@ -9,5 +9,12 @@ class Media < ActiveRecord::Base
   validates_presence_of :mediaType
   validates_numericality_of :price
   validates_numericality_of :code
-    
+
+  before_validation :upcase_title_and_author
+  
+  def upcase_title_and_author
+     self.title.upcase!
+     self.author.upcase!
+  end
+      
 end
