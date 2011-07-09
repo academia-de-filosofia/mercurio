@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
+  <h3><%= @media_type.name %></h3>
+
   <div class="field">
-    <%= f.label t(:name) %><br />
-    <%= f.text_field :name %>
+    <%= f.label t(:loan_days) %><br />
+    <%= f.text_field :loan_days %>
   </div>
 
   <div class="actions">

@@ -1,5 +1,5 @@
 class MediaTypesController < InheritedResources::Base
   
-  actions :index, :show, :edit
+  actions :index, :show, :edit, :update
   
 end

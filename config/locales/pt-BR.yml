@@ -47,6 +47,8 @@
   price: "Preço"
   code: "Tombo"
   author: "Autor"
+  loan_days: "Dias de Empréstimo"
+  
   pending: 
       one: "%{count} pendência"
       other: "%{count} pendências"

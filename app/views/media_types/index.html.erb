@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th><%= t(:name)%></th>
+	<th><%= t(:loan_days)%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,6 +12,7 @@
 <% @media_types.each do |media_type| %>
   <tr class="<%= cycle('odd', 'even') %>">
 	<td><%= media_type.name %></td>
+	<td><%= media_type.loan_days %></td>
     <td><%= link_to t(:show), media_type, :class => 'button' %></td>
     <td><%= link_to t(:edit), edit_media_type_path(media_type), :class => 'button' %></td>
   </tr>
