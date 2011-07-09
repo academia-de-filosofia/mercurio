@@ -1,0 +1,6 @@
+<h1><%= "#{t(:editing)} #{t(:media_type)}"%></h1>
+
+<%= render 'form' %>
+
+<%= link_to t(:show), @media_type, :class => 'button' %> 
+<%= link_to t(:back), media_types_path, :class => 'button' %>

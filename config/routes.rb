@@ -3,6 +3,7 @@ Mercurio::Application.routes.draw do
   resources :genres
 
   resources :medias
+  resources :media_types
   resources :people
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do

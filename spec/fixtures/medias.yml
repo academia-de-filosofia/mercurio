@@ -4,7 +4,7 @@ the_lord_of_rings:
     genre_id: 1
     code: 998
     author: 'Token'
-    mediaType_id: 1
+    media_type_id: 1
     price: 0
 
 harry_potter:
@@ -13,5 +13,5 @@ harry_potter:
     genre_id: 2
     code: 345
     author: 'JKR'
-    mediaType_id: 1
+    media_type_id: 1
     price: 0

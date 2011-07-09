@@ -1,0 +1,18 @@
+<h1><%= "#{t(:listing)} #{t(:media_types)}" %></h1>
+
+<table>
+  <tr>
+    <th><%= t(:name)%></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @media_types.each do |media_type| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+	<td><%= media_type.name %></td>
+    <td><%= link_to t(:show), media_type, :class => 'button' %></td>
+    <td><%= link_to t(:edit), edit_media_type_path(media_type), :class => 'button' %></td>
+  </tr>
+<% end %>
+</table>

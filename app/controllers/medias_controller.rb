@@ -5,19 +5,19 @@ class MediasController < InheritedResources::Base
   end
   
   def new
-    @mediaTypes = MediaType.all
+    @media_types = MediaType.all
     @genres = Genre.all
     super
   end 
   
   def edit
-    @mediaTypes = MediaType.all
+    @media_types = MediaType.all
     @genres = Genre.all
     super
   end
   
   def update
-    @mediaTypes = MediaType.all
+    @media_types = MediaType.all
     @genres = Genre.all
     super
   end

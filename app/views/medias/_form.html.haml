@@ -13,8 +13,8 @@
 			= f.label t(:author)	
 			= f.text_field :author, :size => 45
 		%div.span-4
-			= f.label t(:mediaType) 
-			= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) 
+			= f.label t(:media_type) 
+			= f.select(:media_type_id,  options_from_collection_for_select(@media_types, :id, :name, (unless @media.media_type.nil? then @media.media_type.id end ))) 
 		%div.span-2
 			= f.label t(:genre) 
 			= f.select(:genre_id,  options_from_collection_for_select(@genres, :id, :acronym, (unless @media.genre.nil? then @media.genre.id end ))) 

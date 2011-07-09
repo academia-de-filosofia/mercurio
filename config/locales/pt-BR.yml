@@ -13,12 +13,13 @@
   #Domain
   duration: "Duração"
   description: "Descrição"
-  mediaType: "Tipo de Mídia"
+  media_type: "Tipo de Mídia"
   name: "Nome"
   birth_date: "Data de nascimento"
   phone: "Telefone"
   media: "Mídia"
   medias: "Mídias"
+  media_types:  "Tipos de Mídia"
   person: "Pessoa"
   people: "Pessoas"
   gender: "Sexo"
@@ -54,7 +55,7 @@
   activerecord:
     models:
       media: "Mídia"
-      mediaType: "Tipo de Mídia"
+      media_type: "Tipo de Mídia"
       person: "Pessoa"
       genre: "Gênero"
     attributes:
@@ -67,8 +68,7 @@
         name: "Nome"
         gender: "Sexo"
         home_phone: "Telefone Residencial"
-        birth_date: "Data de Nascimento"
-          
+        birth_date: "Data de Nascimento"          
 
   # formatos de data e hora
   date:

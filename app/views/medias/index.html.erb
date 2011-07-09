@@ -17,7 +17,7 @@
   <tr>
 	<th><%= t(:code) %></th>
     <th><%= t(:title) %></th>
-    <th><%= t(:mediaType) %></th>
+    <th><%= t(:media_type) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,7 +27,7 @@
   <tr class="<%= cycle('odd', 'even') %>">
 	<td><%= media.full_code %></td>
     <td><%= media.title %></td>
-    <td><%= media.mediaType.name %></td>
+    <td><%= media.media_type.name unless media.media_type.nil? %></td>
     <td><%= link_to t(:show), media, :class => 'button' %></td>
     <td><%= link_to t(:edit), edit_media_path(media), :class => 'button' %></td>
     <td><%= link_to t(:destroy), media, :class => 'button', :confirm => 'Are you sure?', :method => :delete %></td>
