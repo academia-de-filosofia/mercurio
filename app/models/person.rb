@@ -9,4 +9,12 @@ class Person < ActiveRecord::Base
     @status ? :active : :inactive
   end
   
+  def self.search(query, page = 1)    
+    if query
+      Person.where('name LIKE upper(:query)', :query => "%#{query}%".upcase!).paginate :page => page, :per_page => 50
+    else
+      Person.paginate :page => page, :per_page => 50
+    end
+  end
+  
 end

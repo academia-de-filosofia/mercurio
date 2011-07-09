@@ -1,5 +1,15 @@
 <h1><%= t(:listing) %> <%= t(:people) %></h1>
 
+<div class="span-20">
+<%= form_tag people_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Buscar", :name => nil %>
+	<%= @people.total_entries %> Pessoa(s) Encontrada(s).
+  </p>
+<% end %>
+</div>
+
 <table class="grade">
   <tr>
     <th><%= t(:name) %></th>
@@ -23,7 +33,7 @@
   </tr>
 <% end %>
 </table>
-
+<%= will_paginate @people %>
 <br />
 
 <%= link_to "#{t(:new)} #{t(:person)}", new_person_path, :class => 'button' %>
