@@ -26,7 +26,7 @@ class Media < ActiveRecord::Base
   end
   
   def full_code
-    self.genre.acronym + self.formatted_code
+    self.genre.acronym + '-' + self.formatted_code
   end
   
   def self.search(query, page = 1)    
