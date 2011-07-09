@@ -1,0 +1,17 @@
+the_lord_of_rings:
+    id: 1
+    title: 'The lord of Rings'
+    genre_id: 1
+    code: 998
+    author: 'Token'
+    mediaType_id: 1
+    price: 0
+
+harry_potter:
+    id: 2
+    title: 'Harry Potter'
+    genre_id: 2
+    code: 345
+    author: 'JKR'
+    mediaType_id: 1
+    price: 0

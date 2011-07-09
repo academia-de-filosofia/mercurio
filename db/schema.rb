@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20110427120502) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "genre_id"
-    t.float    "price"
+    t.decimal  "price"
     t.string   "author"
     t.integer  "code"
   end

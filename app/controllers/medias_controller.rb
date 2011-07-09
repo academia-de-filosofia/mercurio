@@ -1,5 +1,9 @@
 class MediasController < InheritedResources::Base
   
+  def index
+    @medias = Media.list
+  end
+  
   def new
     @mediaTypes = MediaType.all
     @genres = Genre.all

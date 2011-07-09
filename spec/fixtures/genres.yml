@@ -1,0 +1,9 @@
+fiction:
+    id: 1
+    acronym: 'FIC'
+    name: 'Fiction'
+    
+non_fiction:
+    id: 2
+    acronym: 'NFC'
+    name: 'Non-Fiction'

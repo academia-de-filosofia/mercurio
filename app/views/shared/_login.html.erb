@@ -3,7 +3,7 @@
 </div>
 
 <div>
-<% link_to(user_omniauth_authorize_path(:google_apps), html_options = {:method => :post, :class => 'button'}) do %>
+<%= link_to(user_omniauth_authorize_path(:google_apps), html_options = {:method => :post, :class => 'button'}) do %>
 	Entre com sua conta da Academia
 	<img src="images/icons/door_in.png" alt="" />
 <% end %>

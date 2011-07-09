@@ -1,0 +1,6 @@
+book:
+    id: 1
+    name: 'Book'
+dvd:
+    id: 2
+    name: 'DVD'
