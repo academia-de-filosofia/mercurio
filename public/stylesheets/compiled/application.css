@@ -1,0 +1,27 @@
+/* line 1, ../../../app/stylesheets/application.scss */
+.subtitle {
+  color: #0066cc;
+  font-size: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 90%;
+}
+
+/* line 8, ../../../app/stylesheets/application.scss */
+table tr.odd {
+  background-color: white;
+}
+
+/* line 12, ../../../app/stylesheets/application.scss */
+table tr.even {
+  background-color: silver;
+}
+
+/* line 16, ../../../app/stylesheets/application.scss */
+.form label {
+  display: block;
+}
+
+/* line 20, ../../../app/stylesheets/application.scss */
+textarea.description {
+  width: 100%;
+}

@@ -1,0 +1,34 @@
+%div.form.span-24
+	= form_for @media do |f|  
+		- if @media.errors.any?
+			%div#error_explanation.error
+				%h2= t(:pending, :count => @media.errors.count)
+				%ul
+					- @media.errors.full_messages.each do |msg|
+						li= msg
+		%div.span-12
+			= f.label t(:title)
+			= f.text_field :title, :size => 80
+		%div.span-10.last
+			= f.label t(:author)	
+			= f.text_field :author, :size => 45
+		%div.span-4
+			= f.label t(:mediaType) 
+			= f.select(:mediaType_id,  options_from_collection_for_select(@mediaTypes, :id, :name, (unless @media.mediaType.nil? then @media.mediaType.id end ))) 
+		%div.span-2
+			= f.label t(:genre) 
+			= f.select(:genre_id,  options_from_collection_for_select(@genres, :id, :acronym, (unless @media.genre.nil? then @media.genre.id end ))) 
+		%div.span-6
+			= f.label t(:code)
+			= f.text_field(:code, :size => "15", :class => "span-7") 	
+		%div.span-3
+			= f.label t(:price) 
+			= f	.text_field(:price, :size => "7", :class => "span-7") 
+		%div.span-8
+			= f.label t(:duration) 
+			= f.text_field(:time, :size => "3", :class => "span-5") 
+		%div.span-18.clear
+			= f.label t(:description) 
+			= f.text_area :description, :class => 'description' 
+		%div.clear.actions
+			= f.submit 
