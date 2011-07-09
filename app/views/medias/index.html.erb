@@ -16,7 +16,7 @@
 
 <% @medias.each do |media| %>
   <tr class="<%= cycle('odd', 'even') %>">
-	<td><%= media.genre.acronym %><%= media.code %></td>
+	<td><%= media.full_code %></td>
     <td><%= media.title %></td>
     <td><%= media.mediaType.name %></td>
     <td><%= link_to t(:show), media, :class => 'button' %></td>
