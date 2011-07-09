@@ -1,10 +1,19 @@
 <h1><%=t :listing%> <%=t(:medias)%></h1>
 
-<%= link_to "#{t(:new)} #{t(:media)}", new_media_path, :class => 'button' %>
+<div class="span-20">
+<%= form_tag medias_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Buscar", :name => nil %>
+	<%= @medias.total_entries %> Mídia(s) Encontrada(s).
+  </p>
+<% end %>
+</div>
+<div class="span-3">
+	<%= link_to "#{t(:new)} #{t(:media)}", new_media_path, :class => 'button' %>
+</div>
 
-<br/><br/><br/><br/>
-
-<table class="grade">
+<table class="grade clear">
   <tr>
 	<th><%= t(:code) %></th>
     <th><%= t(:title) %></th>
@@ -25,3 +34,7 @@
   </tr>
 <% end %>
 </table>
+
+<div class="apple_pagination">
+<%= will_paginate @medias %>
+</div>

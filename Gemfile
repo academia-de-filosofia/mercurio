@@ -12,6 +12,7 @@ gem 'oa-openid', :require => 'omniauth/openid'
 
 # stylesheets
 gem "compass"
+gem "will_paginate", "~> 3.0.pre2"
 
 group :test, :development do
   gem "rspec-rails"

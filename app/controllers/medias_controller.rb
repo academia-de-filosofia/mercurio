@@ -1,7 +1,7 @@
 class MediasController < InheritedResources::Base
-  
+    
   def index
-    @medias = Media.list
+    @medias = Media.search(params[:query], params[:page])
   end
   
   def new

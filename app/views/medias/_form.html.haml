@@ -5,7 +5,7 @@
 				%h2= t(:pending, :count => @media.errors.count)
 				%ul
 					- @media.errors.full_messages.each do |msg|
-						li= msg
+						%li= msg
 		%div.span-12
 			= f.label t(:title)
 			= f.text_field :title, :size => 80
