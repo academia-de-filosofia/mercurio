@@ -5,6 +5,7 @@ gem 'inherited_resources'
 gem 'jquery-rails'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml'
+gem 'css3buttons'
 
 # authentication
 gem 'devise', '1.4.2'

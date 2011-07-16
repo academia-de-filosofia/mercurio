@@ -10,13 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110709180201) do
+ActiveRecord::Schema.define(:version => 20110716141420) do
 
   create_table "genres", :force => true do |t|
     t.string    "name"
     t.timestamp "created_at"
     t.timestamp "updated_at"
     t.string    "acronym"
+  end
+
+  create_table "media_statuses", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "media_types", :force => true do |t|
@@ -37,6 +43,8 @@ ActiveRecord::Schema.define(:version => 20110709180201) do
     t.decimal  "price"
     t.string   "author"
     t.integer  "code"
+    t.integer  "category_id"
+    t.integer  "media_status_id"
   end
 
   create_table "people", :force => true do |t|

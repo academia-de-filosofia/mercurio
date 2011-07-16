@@ -11,7 +11,7 @@ class Person < ActiveRecord::Base
   
   def self.search(query, page = 1)    
     if query
-      Person.where('name LIKE :query', :query => "%#{query}%").paginate :page => page, :per_page => 50
+      Person.where('name LIKE upper(:query)', :query => "%#{query}%").paginate :page => page, :per_page => 50
     else
       Person.paginate :page => page, :per_page => 50
     end

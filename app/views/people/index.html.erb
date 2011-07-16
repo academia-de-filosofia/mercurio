@@ -3,12 +3,15 @@
 <div class="span-20">
 <%= form_tag people_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :query, params[:query] %>
-    <%= submit_tag "Buscar", :name => nil %>
+    <%= text_field_tag :query, params[:query], :size => 80 %>
+    <%= button_submit_tag "Buscar", :name => nil %>
+	<br>
 	<%= @people.total_entries %> Pessoa(s) Encontrada(s).
   </p>
 <% end %>
 </div>
+
+<%= add_button_link_to "#{t(:new)} #{t(:person)}", new_person_path, :class => 'button' %>
 
 <table class="grade">
   <tr>
@@ -27,13 +30,13 @@
     <td><%= person.birth_date %></td>
     <td><%= person.cell_phone %></td>
     <td><%= person.status ? t(:active) : t(:inactive) %></td>
-    <td><%= link_to t(:show), person, :class => 'button' %></td>
-    <td><%= link_to t(:edit), edit_person_path(person), :class => 'button' %></td>
-    <td><%= link_to t(:destroy), person, :class => 'button', :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_link_to t(:show), person, :class => 'button' %></td>
+    <td><%= button_link_to t(:edit), edit_person_path(person), :class => 'button' %></td>
+    <td><%= negative_button_link_to t(:destroy), person, :class => 'button', :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 <%= will_paginate @people %>
 <br />
 
-<%= link_to "#{t(:new)} #{t(:person)}", new_person_path, :class => 'button' %>
+<%= add_button_link_to "#{t(:new)} #{t(:person)}", new_person_path, :class => 'button' %>

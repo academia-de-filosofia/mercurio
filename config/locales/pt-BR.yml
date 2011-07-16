@@ -12,8 +12,10 @@
 
   #Domain
   duration: "Duração"
+  lend: "Emprestar"
   description: "Descrição"
   media_type: "Tipo de Mídia"
+  media_status: "Status"
   name: "Nome"
   birth_date: "Data de nascimento"
   phone: "Telefone"

@@ -1,6 +1,7 @@
 class Media < ActiveRecord::Base
   belongs_to :media_type, :foreign_key => 'media_type_id'
   belongs_to :genre
+  belongs_to :media_status
 
   default_scope order('title')
   scope :list, joins(:genre)
@@ -31,7 +32,7 @@ class Media < ActiveRecord::Base
   
   def self.search(query, page = 1)    
     if query
-      Media.list.includes(:media_type).includes(:genre).where('title LIKE :query or author LIKE :query', :query => "%#{query}%").paginate :page => page, :per_page => 50
+      Media.list.includes(:media_type).includes(:genre).where('title LIKE :query or author LIKE upper(:query)', :query => "%#{query}%").paginate :page => page, :per_page => 50
     else
       Media.list.includes(:media_type).includes(:genre).paginate :page => page, :per_page => 50
     end

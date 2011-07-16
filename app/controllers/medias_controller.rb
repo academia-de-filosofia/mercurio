@@ -21,6 +21,10 @@ class MediasController < InheritedResources::Base
     @genres = Genre.all
     super
   end
+  
+  def lend 
+    
+  end
 
   
 end
