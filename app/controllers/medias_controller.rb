@@ -22,9 +22,4 @@ class MediasController < InheritedResources::Base
     super
   end
   
-  def lend 
-    
-  end
-
-  
 end

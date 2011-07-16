@@ -37,5 +37,9 @@ class Media < ActiveRecord::Base
       Media.list.includes(:media_type).includes(:genre).paginate :page => page, :per_page => 50
     end
   end
+  
+  def available?
+    #self.media_status.id == 1
+  end
       
 end

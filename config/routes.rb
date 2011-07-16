@@ -1,9 +1,16 @@
 Mercurio::Application.routes.draw do
 
   resources :genres
-
-  resources :medias
   resources :media_types
+
+  resources :medias do
+    member do
+      get 'lend' => 'loans#new'
+    end
+  end
+  
+  post 'loans' => "loans#create", :as => :loans
+  
   resources :people
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do

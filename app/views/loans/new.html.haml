@@ -1,0 +1,25 @@
+%h2 Empréstimo de #{@loan.media.media_type.name}
+
+%h3
+	#{@loan.media.description}
+
+= form_for @loan do |f|
+
+	= f.hidden_field :return_preview_date
+	= f.hidden_field :media_id
+
+	= f.label t(:person)
+	%br
+	= f.select(:person_id, options_from_collection_for_select(@people, :id, :name)) 	
+	%br
+	%br
+	
+	
+	= f.label 'Prazo'
+	%br
+	= @loan.media.media_type.loan_days
+	dias - 
+	= @loan.return_preview_date.strftime("%A, %m de %B de %Y")
+	%br
+	%br
+	= button_submit_tag t(:lend), @loan

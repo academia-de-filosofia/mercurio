@@ -1,0 +1,7 @@
+available:
+    id:1
+    description: 'Available'
+
+lent:
+    id:2
+    description: 'Lent'

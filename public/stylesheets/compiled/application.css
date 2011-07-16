@@ -56,3 +56,8 @@ textarea.description {
 .pagination a:hover, .pagination a:focus {
   text-decoration: underline;
 }
+
+/* line 49, ../../../app/stylesheets/application.scss */
+#footer {
+  padding-top: 20px;
+}

@@ -10,13 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110716141420) do
+ActiveRecord::Schema.define(:version => 20110716145944) do
 
   create_table "genres", :force => true do |t|
     t.string    "name"
     t.timestamp "created_at"
     t.timestamp "updated_at"
     t.string    "acronym"
+  end
+
+  create_table "loans", :force => true do |t|
+    t.integer  "media_id"
+    t.integer  "person_id"
+    t.date     "lent_at"
+    t.date     "return_preview_date"
+    t.date     "returned_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "media_statuses", :force => true do |t|
