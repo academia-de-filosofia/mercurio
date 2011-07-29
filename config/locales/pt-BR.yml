@@ -1,5 +1,4 @@
-"pt_BR":
-
+pt_BR:
   #general
   back: "Voltar"
   edit: "Editar"
@@ -49,31 +48,10 @@
   price: "Preço"
   code: "Tombo"
   author: "Autor"
-  loan_days: "Dias de Empréstimo"
-  
+  loan_days: "Dias de Empréstimo"  
   pending: 
       one: "%{count} pendência"
-      other: "%{count} pendências"
-
-  
-  activerecord:
-    models:
-      media: "Mídia"
-      media_type: "Tipo de Mídia"
-      person: "Pessoa"
-      genre: "Gênero"
-    attributes:
-      media:
-        title: "Título"
-        price: "Preço"
-        code: "Número de Tombo"
-        author: "Autor"
-      person:
-        name: "Nome"
-        gender: "Sexo"
-        home_phone: "Telefone Residencial"
-        birth_date: "Data de Nascimento"          
-
+      other: "%{count} pendências"  
   # formatos de data e hora
   date:
     formats:
@@ -256,9 +234,25 @@
       even: "deve ser par"
 
   activerecord:      
+    models:
+      media: "Mídia"
+      media_type: "Tipo de Mídia"
+      person: "Pessoa"
+      genre: "Gênero"
+    attributes:
+      media:
+        title: "Título"
+        price: "Preço"
+        code: "Número de Tombo"
+        author: "Autor"
+      person:
+        name: "Nome"
+        gender: "Sexo"
+        home_phone: "Telefone Residencial"
+        birth_date: "Data de Nascimento"          
     errors:
       models:
         media:
           attributes:
             code:
-              taken: 'Este número de tombo já existe no genero desta mídia.'
+              taken: 'já está sendo usado por outra mídia.'

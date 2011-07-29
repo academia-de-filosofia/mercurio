@@ -11,7 +11,7 @@ class Media < ActiveRecord::Base
   validates_presence_of :author  
   validates_presence_of :genre
   validates_presence_of :media_type
-  validates_numericality_of :price
+  validates_numericality_of :price, :allow_nil => true
   validates_numericality_of :code
   validates_uniqueness_of :code, :scope => [:genre_id]  
 
