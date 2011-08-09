@@ -32,7 +32,7 @@ class Media < ActiveRecord::Base
   
   def self.search(query, page = 1)    
     if query
-      Media.list.includes(:media_type).includes(:genre).where('title LIKE :query or author LIKE upper(:query)', :query => "%#{query}%").paginate :page => page, :per_page => 50
+      Media.list.includes(:media_type).includes(:genre).where('title LIKE upper(:query) or author LIKE upper(:query) or code LIKE upper(:query) or genres.acronym LIKE upper(:query) or media_types.name LIKE upper(:query)', :query => "%#{query}%").paginate :page => page, :per_page => 50
     else
       Media.list.includes(:media_type).includes(:genre).paginate :page => page, :per_page => 50
     end
