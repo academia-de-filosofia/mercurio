@@ -11,6 +11,8 @@ class LoansController < ApplicationController
     @loan = Loan.new(params[:loan])
     @loan.lent_at = Time.now
     @loan.save
+    @loan.media.lent
+    redirect_to @loan.media
   end
   
 end

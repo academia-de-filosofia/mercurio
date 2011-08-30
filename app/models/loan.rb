@@ -14,5 +14,5 @@ class Loan < ActiveRecord::Base
       errors.add(:media, 'Nao esta disponivel')
     end
   end
-
+  
 end

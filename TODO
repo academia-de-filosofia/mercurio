@@ -1,5 +1,5 @@
-* Emprestar Livro para um Aluno
-* Alterar Status do Livro para Emprestado
+
+
 * Devolver Livro
 * Alterar Status do Livro para Disponível
 * Exibir lista de livros Emprestados
@@ -7,3 +7,7 @@
 * Incluir Campo de Empréstimo (true/false) na mídia para evitar que alguns livros sejam emprestados
 * Calcular a data de previsão de devolução do livro com base na coluna 'loan_days' dos tipos de mídia.
 * Consulta pública do acervo da biblioteca.
+
+
+x Emprestar Livro para um Aluno
+x Alterar Status do Livro para Emprestado

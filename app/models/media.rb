@@ -39,7 +39,18 @@ class Media < ActiveRecord::Base
   end
   
   def available?
-    #self.media_status.id == 1
+    self.media_status.try(:available?)
+  end
+  
+  def lent
+    update_status(2)
+  end
+  
+  private
+  
+  def update_status(media_status_id)
+    self.media_status_id = media_status_id
+    self.save
   end
       
 end
