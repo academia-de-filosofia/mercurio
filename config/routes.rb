@@ -2,7 +2,7 @@ Mercurio::Application.routes.draw do
 
   resources :genres
   resources :media_types
-
+  
   resources :medias do
     member do
       get 'lend' => 'loans#new'
@@ -12,15 +12,14 @@ Mercurio::Application.routes.draw do
   post 'loans' => "loans#create", :as => :loans
   
   resources :people
-
+  
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
     get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
     get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
   end
-
+  
   root :to => "home#index"
   match 'construcao' => "home#construcao"
-  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -69,7 +68,9 @@ Mercurio::Application.routes.draw do
   #     resources :products
   #   end
 
-
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

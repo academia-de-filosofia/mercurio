@@ -1,18 +1,21 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '3.1.0'
 gem 'inherited_resources'
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'heroku'
+gem 'thin'
 
 #view
 gem 'haml'
 gem 'jquery-rails'
 gem 'css3buttons'
 gem "compass"
-gem "will_paginate", "~> 3.0.pre2"
+gem "will_paginate"
+gem "sass"
 
 # authentication
-gem 'devise', '1.4.2'
+gem 'devise'
 gem 'oa-openid', :require => 'omniauth/openid'
 gem 'devise_invitable'
 
@@ -20,17 +23,16 @@ gem 'devise_invitable'
 gem "aws-s3"
 
 #upload
-gem "paperclip", "~> 2.3" 
+gem "paperclip"
 
 group :test, :development do
   gem "rspec-rails"
   gem 'webrat'
   gem 'guard'
   gem 'guard-spork'  
-  gem 'spork', '~> 0.9.0.rc'  
+  gem 'spork'
   gem 'rb-fsevent'
   gem 'growl'
-  gem 'webrat'  
 end
 
 # debbuging
