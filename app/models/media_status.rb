@@ -1,5 +1,8 @@
 class MediaStatus < ActiveRecord::Base
   
+  AVAILABLE = 1
+  LENT = 2
+  
   validates_presence_of :description
   
   def available?

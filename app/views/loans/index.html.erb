@@ -1,0 +1,40 @@
+<h1Empréstimos</h1>
+
+<div class="span-20">
+<%= form_tag loans_path, :method => 'get' do %>
+  <p>
+    <%= select("media", "media_status_id", {'Todos' => nil, 'Emprestados' => '2', 'Devolvidos' => '1'})
+	 %>
+    <%= button_submit_tag "Buscar", :name => nil %>
+	<br>
+	<%= @loans.total_entries %> Pessoa(s) Encontrada(s).
+  </p>
+<% end %>
+</div>
+
+<table class="grade">
+  <tr>
+    <th><%= t(:title) %></th>
+    <th>Status</th>
+    <th><%=t(:person) %></th>
+	<th>Emprestado em</th>
+    <th>Previsão de Devolução</th>
+	<th>Devolvido em</th>
+  </tr>
+
+<% @loans.each do |loan| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= loan.media.title %></td>
+	<td><%= loan.media.media_status.description %></td>
+	<td><%= loan.person.name %></td>	
+	<td><%= loan.lent_at %></td>
+	<td><%= loan.return_preview_date %></td>
+	<td>
+		<%= loan.returned_at if loan.media.available? %>
+		<%= pill_positive_button_link_to(t(:return), return_media_path(loan.media)) if loan.media.lent?%>	
+	</td>	
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @people %>
+<br />

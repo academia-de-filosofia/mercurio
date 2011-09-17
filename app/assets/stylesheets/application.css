@@ -12,3 +12,7 @@ table tr.odd {
 table tr.even {
 	background-color: silver;
 }
+
+.no-wrap {
+	white-space: nowrap;
+}

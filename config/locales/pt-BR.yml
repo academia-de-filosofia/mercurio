@@ -12,6 +12,7 @@ pt_BR:
   #Domain
   duration: "Duração"
   lend: "Emprestar"
+  return: "Devolver"
   description: "Descrição"
   media_type: "Tipo de Mídia"
   media_status: "Status"

@@ -2,6 +2,7 @@ class Media < ActiveRecord::Base
   belongs_to :media_type, :foreign_key => 'media_type_id'
   belongs_to :genre
   belongs_to :media_status
+  has_many :loans
 
   default_scope order('title')
   scope :list, joins(:genre)
@@ -42,14 +43,22 @@ class Media < ActiveRecord::Base
     self.media_status.try(:available?)
   end
   
-  def lent
+  def lent?
+    self.media_status.try(:lent?)
+  end
+  
+  def lend
     update_status(2)
+  end
+  
+  def return
+    update_status(1)
   end
   
   private
   
   def update_status(media_status_id)
-    self.media_status_id = media_status_id
+    self.media_status = MediaStatus.find(media_status_id)
     self.save
   end
       

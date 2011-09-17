@@ -6,9 +6,13 @@ Mercurio::Application.routes.draw do
   resources :medias do
     member do
       get 'lend' => 'loans#new'
+      get 'return' => 'loans#return'
+      get 'cofirm_return' => 'loans#confirm_return'
     end
   end
   
+  
+  get 'loans' => "loans#index", :as => :loans
   post 'loans' => "loans#create", :as => :loans
   
   resources :people
