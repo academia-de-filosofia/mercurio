@@ -19,7 +19,7 @@
 
 <p>
   <b><%=t :status %>:</b>
-  <%= @media.media_status.description %>
+  <%= @media.media_status.try(:description) %>
 </p>
 
 <p>
