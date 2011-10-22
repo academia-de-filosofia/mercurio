@@ -1,6 +1,4 @@
 Mercurio::Application.configure do
-  
-  config.serve_static_assets = true
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -29,6 +27,4 @@ Mercurio::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-  
-
 end
