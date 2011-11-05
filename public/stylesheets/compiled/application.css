@@ -1,0 +1,83 @@
+/* line 1, ../../../app/stylesheets/application.scss */
+.subtitle {
+  color: #0066cc;
+  font-size: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 90%;
+}
+
+/* line 8, ../../../app/stylesheets/application.scss */
+table tr.odd {
+  background-color: white;
+}
+
+/* line 12, ../../../app/stylesheets/application.scss */
+table tr.even {
+  background-color: silver;
+}
+
+/* line 16, ../../../app/stylesheets/application.scss */
+.form label {
+  display: block;
+}
+
+/* line 20, ../../../app/stylesheets/application.scss */
+textarea.description {
+  width: 100%;
+}
+
+/* Pagination */
+/* line 25, ../../../app/stylesheets/application.scss */
+.pagination {
+  background: #F1F1F1;
+  border: 1px solid #E5E5E5;
+  text-align: center;
+  padding: 1em;
+}
+/* line 30, ../../../app/stylesheets/application.scss */
+.pagination a, .pagination span, .pagination em {
+  padding: .2em .3em;
+}
+/* line 33, ../../../app/stylesheets/application.scss */
+.pagination span.disabled {
+  color: #AAA;
+}
+/* line 36, ../../../app/stylesheets/application.scss */
+.pagination em {
+  font-weight: bold;
+  background: transparent url("/images/apple-circle.gif") no-repeat 50% 50%;
+}
+/* line 40, ../../../app/stylesheets/application.scss */
+.pagination a {
+  text-decoration: none;
+  color: black;
+}
+/* line 44, ../../../app/stylesheets/application.scss */
+.pagination a:hover, .pagination a:focus {
+  text-decoration: underline;
+}
+
+/* line 49, ../../../app/stylesheets/application.scss */
+#footer {
+  padding-top: 20px;
+}
+
+
+.subtitle { 
+	color: #0066cc;	
+	font-size: 20px;
+	border-bottom: 1px solid #e0e0e0;
+	width: 90%;
+}
+
+table tr.odd {
+	background-color: white;
+}
+
+table tr.even {
+	background-color: silver;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,10 +14,10 @@
 ActiveRecord::Schema.define(:version => 20110716145944) do
 
   create_table "genres", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "acronym"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "acronym"
   end
 
   create_table "loans", :force => true do |t|
@@ -36,10 +37,10 @@ ActiveRecord::Schema.define(:version => 20110716145944) do
   end
 
   create_table "media_types", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "loan_days"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "loan_days"
   end
 
   create_table "medias", :force => true do |t|
@@ -53,47 +54,46 @@ ActiveRecord::Schema.define(:version => 20110716145944) do
     t.decimal  "price"
     t.string   "author"
     t.integer  "code"
-    t.integer  "category_id"
     t.integer  "media_status_id"
   end
 
   create_table "people", :force => true do |t|
-    t.string    "name"
-    t.string    "rg"
-    t.string    "cpf"
-    t.string    "birth_date"
-    t.string    "gender"
-    t.string    "marital_status"
-    t.string    "home_phone"
-    t.string    "work_phone"
-    t.string    "cell_phone"
-    t.string    "email"
-    t.string    "zip_code"
-    t.string    "address"
-    t.string    "neighborhood"
-    t.string    "city"
-    t.string    "state"
-    t.date      "sign_up_date"
-    t.date      "graduation_date"
-    t.date      "exit_date"
-    t.boolean   "status"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.string   "rg"
+    t.string   "cpf"
+    t.string   "birth_date"
+    t.string   "gender"
+    t.string   "marital_status"
+    t.string   "home_phone"
+    t.string   "work_phone"
+    t.string   "cell_phone"
+    t.string   "email"
+    t.string   "zip_code"
+    t.string   "address"
+    t.string   "neighborhood"
+    t.string   "city"
+    t.string   "state"
+    t.date     "sign_up_date"
+    t.date     "graduation_date"
+    t.date     "exit_date"
+    t.boolean  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email",                               :default => "", :null => false
-    t.string    "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string    "reset_password_token"
-    t.string    "remember_token"
-    t.timestamp "remember_created_at"
-    t.integer   "sign_in_count",                       :default => 0
-    t.timestamp "current_sign_in_at"
-    t.timestamp "last_sign_in_at"
-    t.string    "current_sign_in_ip"
-    t.string    "last_sign_in_ip"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
