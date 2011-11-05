@@ -1,0 +1,26 @@
+%h2 Empréstimo de #{@loan.media.media_type.name}
+
+%div.success
+	Empréstimo realizado com Sucesso
+
+%h3
+	#{@loan.media.title}
+
+%p
+	%b
+		= t :author
+		= @loan.media.author
+
+%p
+	%b
+		= t :code
+		= @loan.media.full_code
+
+%p
+	%b Aluno
+	= @loan.person.name
+
+%p
+	%b Previsão de Devolução
+	= @loan.return_preview_date
+ 

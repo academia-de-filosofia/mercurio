@@ -1,13 +1,12 @@
-
-
-* Devolver Livro
-* Alterar Status do Livro para Disponível
-* Exibir lista de livros Emprestados
-* Exibir lista de livros Emprestados com Atraso de Devolução
+========================================================
+======================== BACKLOG========================
+========================================================
+* Devolver Livro.
+* Alterar Status do Livro para Disponível.
+* Exibir lista de livros Emprestados.
+* Exibir lista de livros Emprestados com Atraso de Devolução.
 * Incluir Campo de Empréstimo (true/false) na mídia para evitar que alguns livros sejam emprestados
-* Calcular a data de previsão de devolução do livro com base na coluna 'loan_days' dos tipos de mídia.
 * Consulta pública do acervo da biblioteca.
-
-
-x Emprestar Livro para um Aluno
-x Alterar Status do Livro para Emprestado
+* Cadastrar o número máximo de empréstimos por membro do tipo de mídia (DVD 1, Livro 1, Revista 1).
+* Relatórios com Quantidades de Mídias Emprestados Tipo e Categoria.
+* Relatório com Valor do Ativo Fixo da Biblioteca para Contabilidade.

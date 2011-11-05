@@ -19,9 +19,9 @@ class LoansController < ApplicationController
       @loan.media.lend
       redirect_to @loan.media
     else
-      render :show
+      @people = Person.all
+      render :new
     end
-    
   end
   
   def return

@@ -26,9 +26,10 @@
 			= f	.text_field(:price, :size => "7", :class => "span-7") 
 		%div.span-8
 			= f.label t(:duration) 
-			= f.text_field(:time, :size => "3", :class => "span-5") 
+			= f.text_field(:time, :size => "3", :class => "span-5") 			
 		%div.span-18.clear
 			= f.label t(:description) 
 			= f.text_area :description, :class => 'description' 
 		%div.clear.actions
+			= f.hidden_field(:media_status_id, :value => 1) 
 			= f.submit 

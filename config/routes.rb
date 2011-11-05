@@ -11,7 +11,6 @@ Mercurio::Application.routes.draw do
     end
   end
   
-  
   get 'loans' => "loans#index", :as => :loans
   post 'loans' => "loans#create", :as => :loans
   
@@ -24,7 +23,6 @@ Mercurio::Application.routes.draw do
   
   root :to => "home#index"
   match 'construcao' => "home#construcao"
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

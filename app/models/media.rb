@@ -39,8 +39,12 @@ class Media < ActiveRecord::Base
     end
   end
   
+  def last_loan
+    self.loans.last
+  end
+  
   def available?
-    self.media_status.try(:available?)
+    self.media_status.nil? or self.media_status.try(:available?)
   end
   
   def lent?

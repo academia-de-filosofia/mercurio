@@ -3,6 +3,13 @@
 %h3
 	#{@loan.media.description}
 
+- if @loan.errors.any?
+	%div#error_explanation.error
+		%h2= t(:pending, :count => @loan.errors.count)
+		%ul
+			- @loan.errors.full_messages.each do |msg|
+				%li= msg
+
 = form_for @loan do |f|
 
 	= f.hidden_field :return_preview_date
@@ -13,7 +20,6 @@
 	= f.select(:person_id, options_from_collection_for_select(@people, :id, :name)) 	
 	%br
 	%br
-	
 	
 	= f.label 'Prazo'
 	%br

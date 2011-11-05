@@ -2,6 +2,15 @@
 
 <h2><%= @media.title %></h2>
 
+<p class='info'>
+  <b><%=t :status %>:</b>
+  <%= @media.media_status.try(:description) %>
+  <% if @media.lent? %>
+	para <%= @media.last_loan.person.name %>
+  <% end %>
+</p>
+
+
 <p>
   <b><%=t :author %>:</b>
   <%= @media.author %>
