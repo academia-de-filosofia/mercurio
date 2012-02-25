@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
   def self.find_for_google_apps_oauth(access_token, signed_in_resource=nil)
-    email = access_token['user_info']['email']
+    email = access_token['info']['email']
     if user = User.find_by_email(email)
       user
     else

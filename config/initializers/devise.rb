@@ -4,6 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "academia@academiadefilosofia.org"
+  config.case_insensitive_keys = [:email]
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -16,7 +17,9 @@ Devise.setup do |config|
   
   #For the Google Apps Auth
   require 'openid/store/filesystem'   
-  config.omniauth :google_apps, OpenID::Store::Filesystem.new('./tmp'), :domain => 'academiadefilosofia.org'
+  require 'omniauth-openid'
+  
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('./tmp'), :domain => 'academiadefilosofia.org', :name => :google_apps, :identifier => 'https://www.google.com/accounts/o8/id'
   
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is

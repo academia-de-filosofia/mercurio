@@ -5,8 +5,8 @@
 * Alterar Status do Livro para Disponível.
 * Exibir lista de livros Emprestados.
 * Exibir lista de livros Emprestados com Atraso de Devolução.
-* Incluir Campo de Empréstimo (true/false) na mídia para evitar que alguns livros sejam emprestados
-* Consulta pública do acervo da biblioteca.
+* Incluir Campo de Empréstimo (true/false) na mídia para evitar que alguns livros sejam emprestados.
 * Cadastrar o número máximo de empréstimos por membro do tipo de mídia (DVD 1, Livro 1, Revista 1).
-* Relatórios com Quantidades de Mídias Emprestados Tipo e Categoria.
+* Relatórios com Quantidades de Mídias Emprestados Tipo e Categoria.	
+* Consulta pública do acervo da biblioteca.
 * Relatório com Valor do Ativo Fixo da Biblioteca para Contabilidade.
