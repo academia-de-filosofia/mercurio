@@ -10,6 +10,10 @@ class Loan < ActiveRecord::Base
     end
   end
 
+  def status_description
+    media.media_status.description
+  end
+
   def media_is_available
    unless media.available?
       errors.add(:media, 'Nao esta disponivel')

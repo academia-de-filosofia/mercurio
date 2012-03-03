@@ -26,7 +26,7 @@
 <% @loans.each do |loan| %>
   <tr class="<%= cycle('odd', 'even') %>">
     <td><%= loan.media.title %></td>
-	<td><%= loan.media.media_status.description %></td>
+	<td><%= loan.status_description %></td>
 	<td><%= loan.person.name %></td>	
 	<td><%= loan.lent_at %></td>
 	<td><%= loan.return_preview_date %></td>
