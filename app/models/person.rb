@@ -4,6 +4,7 @@ class Person < ActiveRecord::Base
   validates_presence_of :name, :gender, :birth_date, :home_phone
   
   default_scope order('name')
+  scope :active, where(:status => true)
   
   def status_description
     self.status ? :active : :inactive

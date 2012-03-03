@@ -9,7 +9,7 @@ class LoansController < ApplicationController
     @loan = Loan.new
     @loan.media = Media.find(params[:id])
     @loan.set_return_preview
-    @people = Person.all
+    @people = Person.active
   end
   
   def create
