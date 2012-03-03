@@ -9,6 +9,11 @@ class User < ActiveRecord::Base
   
   def self.find_for_google_apps_oauth(access_token, signed_in_resource=nil)
     email = access_token['info']['email']
+    
+    unless email.include? 'academiadefilosofia.org'
+      raise "Invalid Domain"
+    end
+    
     if user = User.find_by_email(email)
       user
     else

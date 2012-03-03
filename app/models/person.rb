@@ -6,7 +6,7 @@ class Person < ActiveRecord::Base
   default_scope order('name')
   
   def status_description
-    @status ? :active : :inactive
+    self.status ? :active : :inactive
   end
   
   def self.search(query, page = 1)    

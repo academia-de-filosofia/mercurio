@@ -19,7 +19,11 @@ Devise.setup do |config|
   require 'openid/store/filesystem'   
   require 'omniauth-openid'
   
-  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('./tmp'), :domain => 'academiadefilosofia.org', :name => :google_apps, :identifier => 'https://www.google.com/accounts/o8/id'
+  config.omniauth :open_id, 
+                  :store => OpenID::Store::Filesystem.new('./tmp'), 
+                  :domain => 'academiadefilosofia.org', 
+                  :name => :google_apps, 
+                  :identifier => 'https://www.google.com/accounts/o8/id?hd=academiadefilosofia.org'
   
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is
