@@ -2,9 +2,12 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.0'
 gem 'inherited_resources'
-gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'heroku'
 gem 'thin'
+
+#bd
+gem 'pg'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 
 #view
 gem 'haml'
@@ -48,8 +51,7 @@ group :test, :development do
 end
 
 group :production do 
-	gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
-	#gem 'pg'
+	gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too	
 end
 
 # debbuging
