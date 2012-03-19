@@ -11,7 +11,7 @@ class Loan < ActiveRecord::Base
   end
 
   def status_description
-    media.media_status.description
+    media.media_status.try(:description)
   end
 
   def media_is_available
