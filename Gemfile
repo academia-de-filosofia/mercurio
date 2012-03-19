@@ -7,7 +7,9 @@ gem 'thin'
 
 #bd
 gem 'pg'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+group :development do 
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+end
 
 #view
 gem 'haml'
