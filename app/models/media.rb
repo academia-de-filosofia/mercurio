@@ -2,7 +2,7 @@ class Media < ActiveRecord::Base
   belongs_to :media_type, :foreign_key => 'media_type_id'
   belongs_to :genre
   belongs_to :media_status
-  has_many :loans
+  has_many :loans, :order => 'id ASC'
 
   default_scope order('title')
   scope :list, joins(:genre)
@@ -40,7 +40,7 @@ class Media < ActiveRecord::Base
   end
   
   def last_loan
-    self.loans.last
+    self.loans.first
   end
   
   def available?

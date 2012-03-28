@@ -29,7 +29,7 @@ class LoansController < ApplicationController
   end
   
   def confirm_return
-    @loan = Media.find(params[:id]).loans.last
+    @loan = Media.find(params[:id]).last_loan
     @loan.return
     redirect_to @loan.media
   end

@@ -2,7 +2,7 @@ class Loan < ActiveRecord::Base
   belongs_to :media
   belongs_to :person
   validate :media_is_available
-  default_scope order('lent_at desc')
+  default_scope order('lent_at desc, id desc')
   
   def set_return_preview
     if self.media and self.media.media_type
@@ -33,6 +33,10 @@ class Loan < ActiveRecord::Base
     else
       Loan.paginate :page => page, :per_page => 50
     end
+  end
+  
+  def returned?
+    returned_at != nil
   end
   
 end

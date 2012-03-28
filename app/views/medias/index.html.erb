@@ -31,7 +31,8 @@
 	<td><%= media.media_status.description unless media.media_status.nil? %></td>
 	<td>
 		<%= button_group do %>		
-			<%= pill_positive_button_link_to t(:lend), lend_media_path(media) %>
+			<%= pill_positive_button_link_to t(:lend), lend_media_path(media) if media.available?%>
+			<%= pill_positive_button_link_to t(:return), return_media_path(media) if media.lent?%>
 			<%= pill_button_link_to t(:show), media %>
 			<%= pill_button_link_to t(:edit), edit_media_path(media) %>
 			<%= pill_negative_button_link_to t(:destroy), media, :confirm => 'Tem certeza?', :method => :delete %>
