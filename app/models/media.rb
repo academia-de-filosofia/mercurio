@@ -35,12 +35,37 @@ class Media < ActiveRecord::Base
     self.genre.acronym + '-' + self.formatted_code
   end
   
+  def self.by_code(query, page = 1)
+    acronym = query[0..2]
+    code = self.get_numbers query
+    
+  end
+  
   def self.search(query, page = 1)    
-    if query
-      Media.list.includes(:media_type).includes(:genre).where('title LIKE upper(:query) or author LIKE upper(:query) or genres.acronym LIKE upper(:query) or media_types.name LIKE upper(:query)', :query => "%#{query}%").paginate :page => page, :per_page => 50
+    if query      
+      acronym = query[0..2]
+      code = self.get_numbers query
+      
+      medias = Media.list.includes(:media_type).includes(:genre)
+        .where('genres.acronym = upper(:acronym) and code = :code', :code => code ,:acronym => acronym)
+        .paginate :page => page, :per_page => 50
+      
+      if medias.empty? then
+        medias = Media.list.includes(:media_type).includes(:genre)
+        .where('''title LIKE upper(:query) 
+                  or author LIKE upper(:query) 
+                  or genres.acronym = upper(:acronym) 
+                  or code = :code
+                  or media_types.name LIKE upper(:query)''', 
+                  :query => "%#{query}%",
+                  :code => code,
+                  :acronym => acronym)
+        .paginate :page => page, :per_page => 50
+      end
     else
-      Media.list.includes(:media_type).includes(:genre).paginate :page => page, :per_page => 50
+      medias = Media.list.includes(:media_type).includes(:genre).paginate :page => page, :per_page => 50
     end
+    return medias
   end
   
   def last_loan
@@ -68,6 +93,10 @@ class Media < ActiveRecord::Base
   def update_status(media_status_id)
     self.media_status = MediaStatus.find(media_status_id)
     self.save
+  end
+  
+  def self.get_numbers(query)
+    query.scan(/\d/).join.to_i unless query.nil?
   end
       
 end
