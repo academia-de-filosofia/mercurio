@@ -18,6 +18,10 @@ class Media < ActiveRecord::Base
 
   before_validation :upcase_title_and_author
   
+  def abbreviated_title
+    return excerpt(self.title,:radius => 5)
+  end
+  
   def upcase_title_and_author     
      self.title.upcase! unless self.title.nil?
      self.author.upcase! unless self.author.nil?

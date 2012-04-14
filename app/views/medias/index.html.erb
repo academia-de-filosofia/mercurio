@@ -26,7 +26,7 @@
 <% @medias.each do |media| %>
   <tr class="<%= cycle('odd', 'even') %>">
 	<td><%= media.full_code %></td>
-    <td><%= media.title %></td>
+    <td title="<%= media.title %>"><%= truncate(media.title, :length => 50) %></td>
     <td><%= media.media_type.name unless media.media_type.nil? %></td>
 	<td><%= media.media_status.description unless media.media_status.nil? %></td>
 	<td>
