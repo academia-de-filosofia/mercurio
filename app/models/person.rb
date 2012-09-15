@@ -10,6 +10,10 @@ class Person < ActiveRecord::Base
     self.status ? :active : :inactive
   end
   
+  def is_active
+    self.status
+  end
+  
   def self.search(query, page = 1)    
     if query
       Person.where('upper(name) LIKE upper(:query) or birth_date LIKE upper(:query)', :query => "%#{query}%").paginate :page => page, :per_page => 50

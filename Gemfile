@@ -3,7 +3,12 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.0'
 gem 'inherited_resources'
 gem 'heroku'
+
+#http server
 gem 'thin'
+
+#pdf
+#gem "prawn"
 
 #database
 group :production do 

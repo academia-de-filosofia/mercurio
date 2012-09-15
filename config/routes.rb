@@ -14,7 +14,9 @@ Mercurio::Application.routes.draw do
   get 'loans' => "loans#index", :as => :loans
   post 'loans' => "loans#create", :as => :loans
   
-  resources :people
+  get 'people/emails' => "people#emails"
+  
+  resources :people 
   
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
     get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session

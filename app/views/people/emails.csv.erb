@@ -1,0 +1,5 @@
+<% @people.each do |person| %>
+	<% if !(person.email.nil? or person.email.empty?) and person.is_active %>
+	<%= person.email %>;
+	<% end %>
+<% end %>
