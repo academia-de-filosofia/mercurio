@@ -6,7 +6,9 @@ gem 'heroku'
 gem 'thin'
 
 #database
-gem 'pg'
+group :production do 
+  gem 'pg'
+end
 group :development do 
   gem 'sqlite3'
 end
