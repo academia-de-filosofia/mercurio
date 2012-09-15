@@ -1,6 +1,6 @@
 <h1><%= t(:listing) %> <%= t(:people) %></h1>
 
-<div class="span-20">
+<div class="span-18">
 <%= form_tag people_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :query, params[:query], :size => 80 %>
@@ -12,6 +12,9 @@
 </div>
 
 <%= add_button_link_to "#{t(:new)} #{t(:person)}", new_person_path, :class => 'button' %>
+
+<%= mail_button_link_to "e-mails", :emails, :class => 'button' %>
+
 
 <table class="grade">
   <tr>

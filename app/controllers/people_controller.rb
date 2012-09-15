@@ -5,7 +5,7 @@ class PeopleController  < InheritedResources::Base
   end
   
   def emails
-    @people = Person.search(params[:query], params[:page])
+    @people = Person.all
   end
 
 end

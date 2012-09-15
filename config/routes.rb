@@ -14,7 +14,7 @@ Mercurio::Application.routes.draw do
   get 'loans' => "loans#index", :as => :loans
   post 'loans' => "loans#create", :as => :loans
   
-  get 'people/emails' => "people#emails"
+  get 'people/emails' => "people#emails", :as => :emails
   
   resources :people 
   

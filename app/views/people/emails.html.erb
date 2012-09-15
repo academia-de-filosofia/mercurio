@@ -1,0 +1,20 @@
+<div class="span-18">
+	<h3>Listagens de e-mails (somente membros ativos)</h3>
+</div>
+
+<%= mail_button_link_to "CSV", 'emails.csv', :class => 'button' %>
+
+<table>	
+	<tr>
+		<th>Nome</th>
+		<th>e-mail</th>
+	</tr>
+	<% @people.each do |person| %>
+		<% if (person.is_active_and_has_email) %>
+			<tr>
+				<td><%= person.name %></td>
+				<td><%= person.email %></td>
+			</tr>
+		<% end %>
+	<% end %>		
+</table>
