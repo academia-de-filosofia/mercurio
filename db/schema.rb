@@ -14,33 +14,33 @@
 ActiveRecord::Schema.define(:version => 20120915125049) do
 
   create_table "genres", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "acronym"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "acronym"
   end
 
   create_table "loans", :force => true do |t|
-    t.integer   "media_id"
-    t.integer   "person_id"
-    t.date      "lent_at"
-    t.date      "return_preview_date"
-    t.date      "returned_at"
-    t.timestamp "created_at",          :null => false
-    t.timestamp "updated_at",          :null => false
+    t.integer  "media_id"
+    t.integer  "person_id"
+    t.date     "lent_at"
+    t.date     "return_preview_date"
+    t.date     "returned_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "media_statuses", :force => true do |t|
-    t.string    "description"
-    t.timestamp "created_at",  :null => false
-    t.timestamp "updated_at",  :null => false
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "media_types", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "loan_days"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "loan_days"
   end
 
   create_table "medias", :force => true do |t|
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20120915125049) do
     t.integer  "time"
     t.text     "description",     :limit => 255
     t.integer  "media_type_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "genre_id"
     t.decimal  "price"
     t.string   "author"
@@ -58,42 +58,42 @@ ActiveRecord::Schema.define(:version => 20120915125049) do
   end
 
   create_table "people", :force => true do |t|
-    t.string    "name"
-    t.string    "rg"
-    t.string    "cpf"
-    t.string    "birth_date"
-    t.string    "gender"
-    t.string    "marital_status"
-    t.string    "home_phone"
-    t.string    "work_phone"
-    t.string    "cell_phone"
-    t.string    "email"
-    t.string    "zip_code"
-    t.string    "address"
-    t.string    "neighborhood"
-    t.string    "city"
-    t.string    "state"
-    t.date      "sign_up_date"
-    t.date      "graduation_date"
-    t.date      "exit_date"
-    t.boolean   "status"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.string   "rg"
+    t.string   "cpf"
+    t.string   "birth_date"
+    t.string   "gender"
+    t.string   "marital_status"
+    t.string   "home_phone"
+    t.string   "work_phone"
+    t.string   "cell_phone"
+    t.string   "email"
+    t.string   "zip_code"
+    t.string   "address"
+    t.string   "neighborhood"
+    t.string   "city"
+    t.string   "state"
+    t.date     "sign_up_date"
+    t.date     "graduation_date"
+    t.date     "exit_date"
+    t.boolean  "status"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email",                               :default => "", :null => false
-    t.string    "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string    "reset_password_token"
-    t.string    "remember_token"
-    t.timestamp "remember_created_at"
-    t.integer   "sign_in_count",                       :default => 0
-    t.timestamp "current_sign_in_at"
-    t.timestamp "last_sign_in_at"
-    t.string    "current_sign_in_ip"
-    t.string    "last_sign_in_ip"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,7 +1,5 @@
 class CreateMediaStatuses < ActiveRecord::Migration
-  def self.up
-    drop_table :media_statuses
-    
+  def self.up  
     create_table :media_statuses do |t|
       t.string :description
       t.timestamps
