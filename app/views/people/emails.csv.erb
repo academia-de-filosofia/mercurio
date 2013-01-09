@@ -1,5 +1,18 @@
-<% @people.each do |person| %>
-	<% if person.is_active_and_has_email %>
-		<%= person.email %>;
+<% 
+	@people_by_class = Hash.new
+	@people.each do |person| 
+		if person.is_active_and_has_email 
+			if @people_by_class[person.person_class].nil? 
+				@people_by_class[person.person_class] = Array.new
+			end
+			@people_by_class[person.person_class] << person
+		end 
+ 	end 
+ %>
+
+<% @people_by_class.each do |person_class, current_class| %>
+	<%= person_class %>
+	<% current_class.each do |person| %> 
+		<%= person.email %>,
 	<% end %>
 <% end %>

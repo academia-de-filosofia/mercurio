@@ -88,6 +88,11 @@
   <%= @person.graduation_date %>
 </p>
 
+<p>
+  <b><%=t(:person_class)%>:</b>
+  <%= @person.person_class %>
+</p>
+
 
 <%= link_to t(:back), people_path, :class => 'button' %>
 <%= link_to t(:edit), edit_person_path(@person), :class => 'button' %>

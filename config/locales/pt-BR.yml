@@ -36,6 +36,7 @@ pt_BR:
   address: "Endereço"
   graduation_date: "Data da Formatura"
   sign_up_date: "Aluno desde"
+  person_class: "Turma do Aluno"
   exit_date: "Data da saída"
   active: "Ativo"
   inactive: "Inativo"
