@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th><%= t(:picture) %></th>
+    <th><%= t(:id) %></th>
     <th><%= t(:name) %></th>
     <th><%= t(:origin) %></th>
     <th><%= t(:description) %></th>
@@ -20,6 +21,7 @@
 <% @museum_items.each do |museum_item| %>
   <tr>
     <td><%= image_tag museum_item.picture.url(:thumb) %></td>
+    <td><%= museum_item.id %></td>
     <td><%= museum_item.name %></td>
     <td><%= museum_item.origin %></td>
     <td><%= museum_item.description %></td>
