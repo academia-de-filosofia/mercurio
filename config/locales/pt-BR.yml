@@ -242,9 +242,10 @@ pt_BR:
       media_type: "Tipo de Mídia"
       person: "Pessoa"
       genre: "Gênero"
-      museum_item: "Objeto do Acervo"
+      museum_item: "Item do Acervo"
     attributes:
       museum_item:
+        id: "Código"
         name: "Nome"
         origin: "Origem"
         description: "Descrição"
