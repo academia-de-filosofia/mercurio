@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<div style="float:right">  
+  <%= image_tag @museum_item.picture.url %>
+</div>
+
+<p>
+  <b><%= t(:name) %></b>
+  <%= @museum_item.name %>
+</p>
+
+<p>
+  <b><%= t(:origin) %></b>
+  <%= @museum_item.origin %>
+</p>
+
+<p>
+  <b><%= t(:description) %></b>
+  <%= @museum_item.description %>
+</p>
+
+<p>
+  <b><%= t(:age) %></b>
+  <%= @museum_item.age %>
+</p>
+
+<p>
+  <b><%= t(:material) %></b>
+  <%= @museum_item.material %>
+</p>
+
+<p>
+  <b><%= t(:technique) %></b>
+  <%= @museum_item.technique %>
+</p>
+
+<p>
+  <b><%= t(:height) %></b>
+  <%= @museum_item.height %>
+</p>
+
+<p>
+  <b><%= t(:width) %></b>
+  <%= @museum_item.width %>
+</p>
+
+<p>
+  <b><%= t(:depth) %></b>
+  <%= @museum_item.depth %>
+</p>
+
+
+<%= link_to t(:back), museum_items_path, :class => 'button' %>
+<%= link_to t(:edit), edit_museum_item_path(@museum_item), :class => 'button' %>
+

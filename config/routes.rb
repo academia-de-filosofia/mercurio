@@ -1,5 +1,8 @@
 Mercurio::Application.routes.draw do
 
+  resources :museum_items
+
+
   resources :genres
   resources :media_types
   

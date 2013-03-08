@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130109220038) do
+ActiveRecord::Schema.define(:version => 20130308113523) do
 
   create_table "genres", :force => true do |t|
     t.string    "name"
@@ -55,6 +55,24 @@ ActiveRecord::Schema.define(:version => 20130109220038) do
     t.string   "author"
     t.integer  "code"
     t.integer  "media_status_id"
+  end
+
+  create_table "museum_items", :force => true do |t|
+    t.string   "name"
+    t.string   "origin"
+    t.string   "description"
+    t.string   "age"
+    t.string   "material"
+    t.string   "technique"
+    t.float    "height"
+    t.float    "width"
+    t.float    "depth"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "people", :force => true do |t|

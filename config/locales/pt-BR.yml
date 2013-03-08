@@ -10,6 +10,7 @@ pt_BR:
   new: "Incluir"
 
   #Domain
+  museum_item: "Item do Acervo"
   duration: "Duração"
   lend: "Emprestar"
   return: "Devolver"
@@ -241,7 +242,18 @@ pt_BR:
       media_type: "Tipo de Mídia"
       person: "Pessoa"
       genre: "Gênero"
+      museum_item: "Objeto do Acervo"
     attributes:
+      museum_item:
+        name: "Nome"
+        origin: "Origem"
+        description: "Descrição"
+        age: "Período"
+        technique: "Técnica"
+        height: "Altura"
+        width: "Largura"
+        depth: "Profundidade"
+        picture: "Foto"
       media:
         title: "Título"
         price: "Preço"
