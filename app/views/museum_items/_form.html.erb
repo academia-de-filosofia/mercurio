@@ -16,6 +16,10 @@
   </div>
 
   <div class="field">
+    <%= f.label :inventory_number %><br />
+    <%= f.text_field :inventory_number, :size => 15 %>
+  </div>
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, :size => 100 %>
   </div>
@@ -24,8 +28,8 @@
     <%= f.text_field :origin %>
   </div>  
   <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age %>
+    <%= f.label :acquisition_date %><br />
+    <%= f.text_field :acquisition_date %>
   </div>
   <div class="field">
     <%= f.label :material %><br />

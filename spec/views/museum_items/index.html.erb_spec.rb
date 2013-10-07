@@ -7,7 +7,7 @@ describe "museum_items/index" do
         :name => "Name",
         :origin => "Origin",
         :description => "Description",
-        :age => "Age",
+        :acquisition_date => "Acquisition Date",
         :material => "Material",
         :height => 1.5,
         :width => 1.5,
@@ -17,7 +17,7 @@ describe "museum_items/index" do
         :name => "Name",
         :origin => "Origin",
         :description => "Description",
-        :age => "Age",
+        :acquisition_date => "Acquisition Date",
         :material => "Material",
         :height => 1.5,
         :width => 1.5,
@@ -32,7 +32,7 @@ describe "museum_items/index" do
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Origin".to_s, :count => 2
     assert_select "tr>td", :text => "Description".to_s, :count => 2
-    assert_select "tr>td", :text => "Age".to_s, :count => 2
+    assert_select "tr>td", :text => "Acquisition Date".to_s, :count => 2
     assert_select "tr>td", :text => "Material".to_s, :count => 2
     assert_select "tr>td", :text => 1.5.to_s, :count => 2
     assert_select "tr>td", :text => 1.5.to_s, :count => 2

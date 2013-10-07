@@ -249,7 +249,7 @@ pt_BR:
         name: "Nome"
         origin: "Origem"
         description: "Descrição"
-        age: "Período"
+        acquisition_date: "Data de Aquisição"
         height: "Altura"
         width: "Largura"
         depth: "Profundidade"

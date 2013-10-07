@@ -6,7 +6,7 @@ describe "museum_items/show" do
       :name => "Name",
       :origin => "Origin",
       :description => "Description",
-      :age => "Age",
+      :acquisition_date => "Acquisition Date",
       :material => "Material",
       :height => 1.5,
       :width => 1.5,
@@ -20,7 +20,7 @@ describe "museum_items/show" do
     rendered.should match(/Name/)
     rendered.should match(/Origin/)
     rendered.should match(/Description/)
-    rendered.should match(/Age/)
+    rendered.should match(/AcquisitionDate/)
     rendered.should match(/Material/)
     rendered.should match(/1.5/)
     rendered.should match(/1.5/)
