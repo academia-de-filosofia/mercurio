@@ -11,6 +11,7 @@ pt_BR:
 
   #Domain
   museum_item: "Item do Acervo"
+  museum_items: "Itens do Acervo"
   duration: "Duração"
   lend: "Emprestar"
   return: "Devolver"
@@ -265,8 +266,7 @@ pt_BR:
         name: "Nome"
         gender: "Sexo"
         home_phone: "Telefone Residencial"
-        birth_date: "Data de Nascimento"          
-    errors:
+        birth_date: "Data de Nascimento"
       models:
         media:
           attributes:

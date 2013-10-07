@@ -1,7 +1,7 @@
 <%= form_for @museum_item, :html => { :multipart => true } do |f| %>
   <% if @museum_item.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@museum_item.errors.count, "error") %> prohibited this museum_item from being saved:</h2>
+      <h2><%= @museum_item.errors.count %> erro(s) ao salvar:</h2>
 
       <ul>
       <% @museum_item.errors.full_messages.each do |msg| %>
