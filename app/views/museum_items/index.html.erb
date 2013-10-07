@@ -5,9 +5,7 @@
 	<th><%= t('activerecord.attributes.museum_item.picture') %></th>
 	<th><%= t('activerecord.attributes.museum_item.inventory_number') %></th>
 	<th><%= t('activerecord.attributes.museum_item.name') %></th>
-	<th><%= t('activerecord.attributes.museum_item.origin') %></th>
 	<th><%= t('activerecord.attributes.museum_item.acquisition_date') %></th>
-	<th><%= t('activerecord.attributes.museum_item.material') %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,10 +15,8 @@
   <tr>
     <td><%= image_tag museum_item.picture.url(:thumb) %></td>
     <td><%= museum_item.inventory_number %></td>
-    <td title='<%= museum_item.name %>'><%= museum_item.name.truncate(20) %></td>
-    <td><%= museum_item.origin %></td>
+    <td title='<%= museum_item.name %>'><%= museum_item.name.truncate(40) %></td>
     <td><%= museum_item.acquisition_date %></td>
-    <td><%= museum_item.material %></td>
     <td><%= link_to t(:show), museum_item, :class => :button %></td>
     <td><%= link_to t(:edit), edit_museum_item_path(museum_item), :class => :button %></td>
     <td><%= link_to t(:destroy), museum_item, method: :delete, data: { confirm: 'Você está certo disso?' }, :class => :button %></td>

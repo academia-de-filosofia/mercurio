@@ -245,7 +245,6 @@ pt_BR:
       museum_item: "Item do Acervo"
     attributes:
       museum_item:
-        id: "Código"
         name: "Nome"
         origin: "Origem"
         description: "Descrição"
@@ -255,6 +254,8 @@ pt_BR:
         depth: "Profundidade"
         picture: "Foto"
         inventory_number: "Número de inventário"
+        status: "Estado de Conservação"
+        notes: "Observações"
       media:
         title: "Título"
         price: "Preço"

@@ -5,8 +5,8 @@
 </div>
 
 <p>
-  <b><%= t('activerecord.attributes.museum_item.id') %></b>
-  <%= @museum_item.id %>
+  <b><%= t('activerecord.attributes.museum_item.inventory_number') %></b>
+  <%= @museum_item.inventory_number %>
 </p>
 
 <p>
@@ -15,8 +15,8 @@
 </p>
 
 <p>
-  <b><%= t('activerecord.attributes.museum_item.origin') %></b>
-  <%= @museum_item.origin %>
+  <b><%= t('activerecord.attributes.museum_item.acquisition_date') %></b>
+  <%= @museum_item.acquisition_date %>
 </p>
 
 <p>
@@ -25,13 +25,18 @@
 </p>
 
 <p>
-  <b><%= t('activerecord.attributes.museum_item.age') %></b>
-  <%= @museum_item.age %>
+  <b><%= t('activerecord.attributes.museum_item.origin') %></b>
+  <%= @museum_item.origin %>
 </p>
 
 <p>
   <b><%= t('activerecord.attributes.museum_item.material') %></b>
   <%= @museum_item.material %>
+</p>
+
+<p>
+  <b><%= t('activerecord.attributes.museum_item.status') %></b>
+  <%= @museum_item.status %>
 </p>
 
 <p>
@@ -49,6 +54,10 @@
   <%= @museum_item.depth %> cm
 </p>
 
+<p>
+  <b><%= t('activerecord.attributes.museum_item.notes') %></b>
+  <%= @museum_item.notes %>
+</p>
 
 <%= link_to t(:back), museum_items_path, :class => 'button' %>
 <%= link_to t(:edit), edit_museum_item_path(@museum_item), :class => 'button' %>
