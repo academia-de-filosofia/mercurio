@@ -250,11 +250,11 @@ pt_BR:
         origin: "Origem"
         description: "Descrição"
         age: "Período"
-        technique: "Técnica"
         height: "Altura"
         width: "Largura"
         depth: "Profundidade"
         picture: "Foto"
+        inventory_number: "Número de inventário"
       media:
         title: "Título"
         price: "Preço"

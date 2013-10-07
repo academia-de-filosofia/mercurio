@@ -11,9 +11,13 @@
     </div>
   <% end %>
 
+  <div style="float:right">
+	<%= image_tag @museum_item.picture.url(:medium) %>
+  </div>
+
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :size => 100 %>
   </div>
   <div class="field">
     <%= f.label :origin %><br />
@@ -28,20 +32,16 @@
     <%= f.text_field :material %>
   </div>
   <div class="field">
-    <%= f.label :technique %><br />
-    <%= f.text_field :technique %>
-  </div>
-  <div class="field">
     <%= f.label :height %><br />
-    <%= f.text_field :height %>
+    <%= f.text_field :height, :size => 10 %> cm
   </div>
   <div class="field">
     <%= f.label :width %><br />
-    <%= f.text_field :width %>
+    <%= f.text_field :width, :size => 10 %> cm
   </div>
   <div class="field">
     <%= f.label :depth %><br />
-    <%= f.text_field :depth %>
+    <%= f.text_field :depth, :size => 10 %> cm
   </div>
   <div class="field">
     <%= f.label :description %><br />

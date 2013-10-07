@@ -1,57 +1,52 @@
 <p id="notice"><%= notice %></p>
 
-<div style="float:right">  
-  <%= image_tag @museum_item.picture.url %>
+<div style="float:right">
+  <%=link_to image_tag(@museum_item.picture.url(:medium)), @museum_item.picture.url(:original) %>
 </div>
 
 <p>
-  <b><%= t(:id) %></b>
+  <b><%= t('activerecord.attributes.museum_item.id') %></b>
   <%= @museum_item.id %>
 </p>
 
 <p>
-  <b><%= t(:name) %></b>
+  <b><%= t('activerecord.attributes.museum_item.name') %></b>
   <%= @museum_item.name %>
 </p>
 
 <p>
-  <b><%= t(:origin) %></b>
+  <b><%= t('activerecord.attributes.museum_item.origin') %></b>
   <%= @museum_item.origin %>
 </p>
 
 <p>
-  <b><%= t(:description) %></b>
+  <b><%= t('activerecord.attributes.museum_item.description') %></b>
   <%= @museum_item.description %>
 </p>
 
 <p>
-  <b><%= t(:age) %></b>
+  <b><%= t('activerecord.attributes.museum_item.age') %></b>
   <%= @museum_item.age %>
 </p>
 
 <p>
-  <b><%= t(:material) %></b>
+  <b><%= t('activerecord.attributes.museum_item.material') %></b>
   <%= @museum_item.material %>
 </p>
 
 <p>
-  <b><%= t(:technique) %></b>
-  <%= @museum_item.technique %>
+  <b><%= t('activerecord.attributes.museum_item.height') %></b>
+  <%= @museum_item.height %> cm
 </p>
 
 <p>
-  <b><%= t(:height) %></b>
-  <%= @museum_item.height %>
+  <b><%= t('activerecord.attributes.museum_item.width') %></b>
+  <%= @museum_item.width %> cm
 </p>
 
 <p>
-  <b><%= t(:width) %></b>
-  <%= @museum_item.width %>
-</p>
-
-<p>
-  <b><%= t(:depth) %></b>
-  <%= @museum_item.depth %>
+  <b><%= t('activerecord.attributes.museum_item.depth') %></b>
+  <%= @museum_item.depth %> cm
 </p>
 
 

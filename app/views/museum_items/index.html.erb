@@ -2,17 +2,12 @@
 
 <table>
   <tr>
-    <th><%= t(:picture) %></th>
-    <th><%= t(:id) %></th>
-    <th><%= t(:name) %></th>
-    <th><%= t(:origin) %></th>
-    <th><%= t(:description) %></th>
-    <th><%= t(:age) %></th>
-    <th><%= t(:material) %></th>
-    <th><%= t(:technique) %></th>
-    <th><%= t(:height) %></th>
-    <th><%= t(:width) %></th>
-    <th><%= t(:depth) %></th>
+	<th><%= t('activerecord.attributes.museum_item.picture') %></th>
+	<th><%= t('activerecord.attributes.museum_item.id') %></th>
+	<th><%= t('activerecord.attributes.museum_item.name') %></th>
+	<th><%= t('activerecord.attributes.museum_item.origin') %></th>
+	<th><%= t('activerecord.attributes.museum_item.age') %></th>
+	<th><%= t('activerecord.attributes.museum_item.material') %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,15 +17,10 @@
   <tr>
     <td><%= image_tag museum_item.picture.url(:thumb) %></td>
     <td><%= museum_item.id %></td>
-    <td><%= museum_item.name %></td>
+    <td title='<%= museum_item.name %>'><%= museum_item.name.truncate(20) %></td>
     <td><%= museum_item.origin %></td>
-    <td><%= museum_item.description %></td>
     <td><%= museum_item.age %></td>
     <td><%= museum_item.material %></td>
-    <td><%= museum_item.technique %></td>
-    <td><%= museum_item.height %></td>
-    <td><%= museum_item.width %></td>
-    <td><%= museum_item.depth %></td>    
     <td><%= link_to t(:show), museum_item, :class => :button %></td>
     <td><%= link_to t(:edit), edit_museum_item_path(museum_item), :class => :button %></td>
     <td><%= link_to t(:destroy), museum_item, method: :delete, data: { confirm: 'Você está certo disso?' }, :class => :button %></td>

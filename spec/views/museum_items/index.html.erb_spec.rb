@@ -9,7 +9,6 @@ describe "museum_items/index" do
         :description => "Description",
         :age => "Age",
         :material => "Material",
-        :technique => "Technique",
         :height => 1.5,
         :width => 1.5,
         :depth => 1.5
@@ -20,7 +19,6 @@ describe "museum_items/index" do
         :description => "Description",
         :age => "Age",
         :material => "Material",
-        :technique => "Technique",
         :height => 1.5,
         :width => 1.5,
         :depth => 1.5
@@ -36,7 +34,6 @@ describe "museum_items/index" do
     assert_select "tr>td", :text => "Description".to_s, :count => 2
     assert_select "tr>td", :text => "Age".to_s, :count => 2
     assert_select "tr>td", :text => "Material".to_s, :count => 2
-    assert_select "tr>td", :text => "Technique".to_s, :count => 2
     assert_select "tr>td", :text => 1.5.to_s, :count => 2
     assert_select "tr>td", :text => 1.5.to_s, :count => 2
     assert_select "tr>td", :text => 1.5.to_s, :count => 2

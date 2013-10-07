@@ -8,7 +8,6 @@ describe "museum_items/new" do
       :description => "MyString",
       :age => "MyString",
       :material => "MyString",
-      :technique => "MyString",
       :height => 1.5,
       :width => 1.5,
       :depth => 1.5
@@ -25,7 +24,6 @@ describe "museum_items/new" do
       assert_select "input#museum_item_description[name=?]", "museum_item[description]"
       assert_select "input#museum_item_age[name=?]", "museum_item[age]"
       assert_select "input#museum_item_material[name=?]", "museum_item[material]"
-      assert_select "input#museum_item_technique[name=?]", "museum_item[technique]"
       assert_select "input#museum_item_height[name=?]", "museum_item[height]"
       assert_select "input#museum_item_width[name=?]", "museum_item[width]"
       assert_select "input#museum_item_depth[name=?]", "museum_item[depth]"
